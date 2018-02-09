@@ -1,3 +1,6 @@
 # NSNS
 cogs120Group work
-YUJIE WANG~~~~~
+Liuyi Chen
+Francisco Ochoa
+Kai-Chin Shih
+Yujie Wang
