@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Add New Task</title>
+		<link href="/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<form id="addNewTaskForm" role = "page" method="get" action="/add">
+		<h1>Add Task</h1>
+
+		<div class ="taskname">
+			<h3>Task Name</h3>
+			<input type="text" id="taskInput" 
+			placeholder="Buy a book...">
+		</div>
+		<div class="time">
+			<h3>Time</h3>
+			<select>
+  			<option value="0000">00:00</option>
+			<option value="0600">06:00</option>
+			<option value="1200">12:00</option>
+			<option value="1800">18:00</option>
+			</select>
+		</div>
+		<div class="location">
+			<h3>Location</h3>
+			<input type="text" id="locationInput" 
+			placeholder="Ralphs La Jolla">
+		</div>
+		<div class="repeat">
+			<h3>Repeat</h3>
+			<input type="radio" name="date" value="7" checked> S 
+			<input type="radio" name="date" value="1" > M
+			<input type="radio" name="date" value="2"> T
+			<input type="radio" name="date" value="3"> W
+			<input type="radio" name="date" value="4"> T
+			<input type="radio" name="date" value="5"> F
+			<input type="radio" name="date" value="6"> S
+		</div>
+		<div class="notification">
+			<h3>Sound Notification</h3>
+			<input type="radio" name="repeat" value="Vibration Only" checked> Vibration Only 
+			<input type="radio" name="repeat" value="Headphones Only"> Headphones Only
+		</div>
+		 <input type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
+	</form>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</html>
