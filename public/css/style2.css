@@ -1,0 +1,16 @@
+body {
+	font-family: Helvetica;
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.Login{
+margin-bottom: 6px;
+width: 100px;
+}
+
+
+h1 {
+	text-align: center;
+}

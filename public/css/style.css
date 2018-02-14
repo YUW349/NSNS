@@ -110,14 +110,38 @@ ul.tasks li .buttons button svg {
 
 }
 
-#userpassword{
-margin-bottom: 6px;
+.password{
+margin-bottom: 30px;
+text-align: center;
 }
 
 .Login{
-margin-bottom: 6px;
-width:100px;
+margin-bottom: 30px;
+text-align: center;
 }
+
+.username{
+margin-bottom: 30px;
+text-align: center;
+}
+
+.searchBar {
+	text-align: center;
+}
+
+#searchBar {
+	width: 70%;
+}
+
+.backButton{
+	cursor: pointer;
+	float:right;
+	position:relative;
+	right: 50px;
+	bottom: 200px;
+
+}
+
 
 
 
