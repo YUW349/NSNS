@@ -9,3 +9,11 @@ exports.view = function(req, res){
 
 
 
+exports.login = function(req,res){
+   var userName = req.query.userName;
+  ;
+	res.render('home',{
+
+		"userName" : "welcome to the reminder " + userName +" !"
+	});
+}
