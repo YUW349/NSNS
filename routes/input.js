@@ -17,5 +17,5 @@ exports.addNewTask = function(req,res){
 	console.log(newTask);
     data.tasks.push(newTask);
     console.log(data);
-    res.render('index',data)
+    res.render('home',data)
 }

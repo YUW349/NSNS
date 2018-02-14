@@ -6,13 +6,24 @@
 	</head>
 	<body>	
 		<h1>Login</h1>
-	
+	  
+	  <form id="userLogin" role = "page" method="get" action="/index">
 		<div class="Login">
-    		<input type="text" id="userLogin" placeholder= "username"><br>
-    		<input type="text" id="userpassword" placeholder="password"><br>
-    		<a href="home">
-    			<input type = "submit" value="submit">
-			</a>
+			<div class ="username">
+			<label for="username">username:</label><br>
+    		<input type="text" id="userLogin" placeholder= "username" name="userName"><br>
     	</div>
+
+    	<div class ="password">
+    		<label for="password">password:</label><br>
+    		<input type="text" id="userpassword" placeholder="password" name="password"><br>
+    	</div>
+    		
+    		<a href = "home/{{userName}}">	<input type = "submit" value="Login"></a>
+			
+    	</div>
+    </form>
 	</body>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 </html>
