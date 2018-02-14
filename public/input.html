@@ -7,10 +7,20 @@
 		<link href="css/style.css" rel="stylesheet">
 
 	</head>
-
+	<style>
+		.taskname, .time, .location, .repeat, .notification  {
+    		padding: 10px;
+		}
+	</style>
 	<body>
 		<form id="addNewTaskForm" role = "page" method="get" action="/input">
 		<h1 style="text-align:center">Add Task</h1>
+
+		<a href="#" class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>                                         
+			<div class="line"></div>
+		</a>
 
 		<div class ="taskname">
 			<label for="taskname">Task Name:</label><br>
@@ -124,7 +134,7 @@
 			<input type="radio" name="repeat" value="Headphones Only"> Headphones Only
 		</div>
 		
-		 	<input type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
+		<input  type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
 		 
 	</form>
 	</body>
