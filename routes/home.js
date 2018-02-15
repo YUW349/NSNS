@@ -17,3 +17,5 @@ exports.login = function(req,res){
 		"userName" : "welcome to the reminder " + userName +" !"
 	});
 }
+
+
