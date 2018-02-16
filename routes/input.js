@@ -15,8 +15,8 @@ exports.addNewTask = function(req,res){
 
 	}
     console.log(count);
-	console.log(newTask);
+	//console.log(newTask);
     data.tasks.push(newTask);
-    console.log(data);
+    //console.log(data);
     res.render('home',data)
 }

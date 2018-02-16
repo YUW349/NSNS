@@ -19,3 +19,13 @@ exports.login = function(req,res){
 }
 
 
+/*exports.removeTask = function(req,res){
+
+    var projectId = req.params.id;
+    projectId = parseInt(projectId);
+    console.log(projectId);
+    data.tasks.splice(projectId,1);
+    console.log(data);
+
+    res.render('home',data);
+}*/
