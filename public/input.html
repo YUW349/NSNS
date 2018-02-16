@@ -11,10 +11,13 @@
 		.taskname, .time, .location, .repeat, .notification  {
     		padding: 10px;
 		}
+		
 	</style>
 	<body>
 		<form id="addNewTaskForm" role = "page" method="get" action="/input">
 		<h1 style="text-align:center">Add Task</h1>
+		
+		<input type="button" value="Back" onclick="goBack()">
 
 
 		<div class ="taskname">
@@ -22,6 +25,7 @@
 			<input type="text" id="taskname" 
 			placeholder="Buy a book..." name="taskname">
 		</div>
+
 		<div class="time">
 			<label for="time">Time:</label><br>
 			<select id="time" name="time">
@@ -108,6 +112,8 @@
 		    </select>
 		</div>
 
+
+
 		<div class="location">
 			<label for="location">Location:</label><br>
 			<input type="text" id="location" 
@@ -128,6 +134,7 @@
 			<input type="radio" name="repeat" value="Vibration Only" checked> Vibration Only 
 			<input type="radio" name="repeat" value="Headphones Only"> Headphones Only
 		</div>
+
 		
 		<input  type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
 		 
@@ -135,4 +142,5 @@
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/home.js"></script>
 </html>

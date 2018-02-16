@@ -136,10 +136,11 @@ text-align: center;
 
 .backButton{
 	cursor: pointer;
-	float:right;
-	position:relative;
-	right: 50px;
-	bottom: 200px;
+	float:left;
+	position: fixed;
+	left:15px;
+	top:0px;
+	
 
 }
 
@@ -148,4 +149,6 @@ text-align: center;
 
 	text-align: center;
 }
+
+
 

@@ -12,8 +12,10 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "engine-handlebars": "^0.8.2",
     "express": "3.x",
     "express3-handlebars": "*",
+    "helper-link-to": "^0.3.0",
     "mongodb": "*",
     "mongoose": "*"
   },

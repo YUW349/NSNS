@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 
-app.get('/home', home.login);
+app.get('/home', home.login); 
 app.get('/home',home.view);
 app.get('/input',input.addNewTask);
 // Example route
@@ -48,3 +48,4 @@ app.get('/input',input.addNewTask);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+

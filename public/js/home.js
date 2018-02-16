@@ -45,9 +45,10 @@ $.get("../../tasks.json",function(data){
 	data.splice(projectId,1);
 })
 	}
-	
 
-
+function goBack(){
+				window.history.back();
+			}
 /*
 $('.deletingTask').click(function(){
 	var item = this.parentNode.parentNode;
