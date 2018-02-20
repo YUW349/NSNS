@@ -47,7 +47,8 @@ $.get("../../tasks.json",function(data){
 	}
 
 function goBack(){
-				window.history.back();
+	var returnlink = "../../views/index";
+				window.history.go(-100);
 			}
 /*
 $('.deletingTask').click(function(){
