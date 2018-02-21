@@ -1,15 +1,5 @@
 'use strict';
 
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function() {
 	initializePage();
 })
@@ -48,7 +38,16 @@ $.get("../../tasks.json",function(data){
 
 function goBack(){
 				window.history.back();
-			}
+	}
+
+
+
+//show intro only when no tasks present
+var introBar = document.getElementsByClassName("intro")[0];
+var taskLength = document.getElementsByClassName("tasklist").length;
+if(taskLength > 0) {
+	introBar.style.display = 'none';
+}
 /*
 $('.deletingTask').click(function(){
 	var item = this.parentNode.parentNode;

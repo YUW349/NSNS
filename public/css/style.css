@@ -1,15 +1,33 @@
 body {
-	font-family: Helvetica;
+	background-color: #F5F5F5;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	max-width: 100%;
 	margin: 0 auto;
 }
 
-nav, h1 {
+h1 {
+	color: white;
+	letter-spacing: 2px;
+	font-size: 1.5em; 
 	max-width: 100%;
 	text-align: center;
+	font-weight: normal;
+
 }
 
-.hamburger {
+p{
+	opacity: 0.7;
+}
+
+.header{
+	opacity: 0.86;
+	background-color: #7BABEE;
+	text-align: center;
+	padding: 10px;
+}
+
+
+/*.hamburger {
 	cursor: pointer;
 	padding: 10px 20px;
 	display: block;
@@ -51,7 +69,7 @@ nav, h1 {
 
 .active{
 	display: block;
-}
+}*/
 
 #detail {
 	font-size: 0.8em;
@@ -60,57 +78,30 @@ nav, h1 {
 	margin-bottom: 0px;
 }
 
-
+/*
 ul.tasks{
 	width:89%;
 	float: left;
 }
-
-ul.tasks li{
-	font-size: 1.2em;
-	list-style: none;
-	float: left;
-	width: 91.5%;
-	padding: 13px;
-	border-style: groove;
-	border-radius: 5px;
-	margin-bottom: 50px;
+*/
 
 
-}
-ul.tasks li .buttons{
-	width: 100px;
-	height: 50px;
-	position: relative;
-	left: 500px;
-	bottom: 30px; 
-}
-
-ul.tasks li .buttons button{
-	cursor: pointer;
-	width:50px;
-	height:50px;
-	float:left;
-	background: none;
-	border:0px;
-	box-shadow:none;
-	outline:none;
-}
-
-ul.tasks li .buttons button svg {
-	width: 22px;
-	height: 22px;
-	position: relative;
-	margin: -11px 0 0 -11px;
-}
 
 .addButton{
 	cursor: pointer;
 	float:right;
 	position:relative;
-	right:50px;
-	bottom: 200px;
+	right:-4px;
+	top: -50px;
 
+}
+
+#logout{
+	cursor: pointer;
+	float:right;
+	position:relative;
+	right:339px;
+	top: -50px;
 }
 
 .password{
@@ -147,8 +138,29 @@ text-align: center;
 }
 
 
-.uniqueH3 h3{
+.intro {
 
 	text-align: center;
+	background-color: white;
+	width:80%;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: fixed;
+	left:15px;
+	margin-top:20px;
+	display: block;
+}
+
+ul.tasks li {
+	text-align: center;
+	background-color: white;
+	width:80%;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	list-style: none;
+	width: 91.5%;
+	padding: 13px;
+	margin-bottom: 50px;
+
 }
 
