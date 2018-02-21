@@ -37,8 +37,8 @@ $.get("../../tasks.json",function(data){
 	}
 
 function goBack(){
-	var returnlink = "../../views/index";
-				window.history.go(-100);
+	
+				window.history.back();
 			}
 
 
