@@ -23,7 +23,7 @@ exports.login = function(req,res){
 
   res.render('home',{
 
-    "welcome" : "welcome to the reminder " + userName +" !"
+    "welcome" : "welcome to the reminder " + userName +"!"
   });
 }
 
