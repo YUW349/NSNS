@@ -37,9 +37,9 @@ $.get("../../tasks.json",function(data){
 	}
 
 function goBack(){
-				window.history.back();
-	}
-
+	var returnlink = "../../views/index";
+				window.history.go(-100);
+			}
 
 
 //show intro only when no tasks present
