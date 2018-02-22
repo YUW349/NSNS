@@ -6,11 +6,32 @@
 		<link href="/css/style.css" rel="stylesheet">
 	</head>
 	<body>
+
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      :'2037252603208547' ,
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 		<div class="header">
 			<h1>Login</h1>
-			<p class="facebookLogin">Please login through Facebook 
+			<p class="facebookLogin"> Facebook login
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
+</p>
 		</div>
 	  
 	  <form id="userLogin" role = "page" method="get" action="/home">
@@ -32,6 +53,6 @@
 	</body>
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	
+
 <script src="/js/facebook.js"></script>
 </html>
