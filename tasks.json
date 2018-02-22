@@ -2,7 +2,7 @@
 	"tasks" : [{
 
 		"taskname" : "Task Name: Default task  " ,
-              "time" : "Time: 12:30 AM" ,
+              "time" : "Time: 12:30:30" ,
               "countdown" : "TIME UP" ,
               "location" : "Location: Price Center ",
               "id" : 0

@@ -7,16 +7,15 @@ exports.addNewTask = function(req,res){
 	var location = req.query.location;
 	var count = Object.keys(data.tasks).length ;
 
-	var countDownDate = new Date("Feb 22, 2018 " + time + ":" + time2 + ":" + time3).getTime();
+	var countDownDate = new Date("Feb 22, 2018 " + time + time2 + time3).getTime();
 		var now = new Date().getTime();
 		var distance = countDownDate - now;
 		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
 		if(distance<0){
-        		var countdown = "overdue";
+        		var countdown = "TIME UP";
 				}else{
 				var countdown = "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 				}
@@ -33,5 +32,5 @@ exports.addNewTask = function(req,res){
 	//console.log(newTask);
     data.tasks.push(newTask);
     //console.log(data);
-    res.render('home',data)
+    res.render('home',data);
 }
