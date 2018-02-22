@@ -3,55 +3,44 @@
 	<head>
 		<title>Landing Page</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<link href="/css/style.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	
 	<body>
-		<h1>My Tasks</h1>			
+		<div class="header">
+			<h1>My Tasks</h1>
+		</div>
+
+		<a href = "/views/index"><img id="logout" src = "/image/logout.jpg" width="29" height="29"  ></a>
+					
 		<nav>
-			<a href="#" class="hamburger">
-				<div class="line"></div>
-				<div class="line"></div>                                         
-				<div class="line"></div>
-			</a>
-
 			<a href="/input.html" class="addButton">
-				<svg height=357px style="enable-background:new 0 0 357 357"version=1.1 viewBox="0 0 357 357"width=30px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g id=add><path d=M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z /></g></g></svg>
+				<img src = "/image/add.jpg" width="20" height="20">
 			</a>
-
-			<ul class="menu">
-				<li><a href="#">My Acount</a></li>
-				<li><a href="#">My Tasks</a></li>
-				<li><a href="#">History</a></li>
-				<li><a href="#">Explore</a></li>
-			</ul>
-
+			
 		</nav> 
-		<h1>To add a new task, click on the + button.</h1>
+		<div class = "intro">
+			<p>{{welcome}}</p>
+			<p>To add a new task, click on the + button.</p>
 
-{{#each tasks}} 
+		</div> 
+
 <ul class="tasks">
-	<li>
-	<p>{{taskname}}</p>
-    <p>{{time}}</p> 
-    <p>{{location}}</p>
+	<li class ="tasklist" id= "{{id}}">
+	<p>Task Name: Default task</p>
+    <p>Time: 12:30 AM</p> 
+    <p>Price Center</p>
+     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
 </li>
 </ul>
-{{/each}}
+
 
 		
 
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-	$('.hamburger').click(function(){
-		$('.menu').toggleClass('active');
-	})
-
-	})
-	</script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/home.js"></script>
 	</body>
 </html>
