@@ -3,6 +3,7 @@
 
 		"taskname" : "Task Name: Default task  " ,
               "time" : "Time: 12:30 AM" ,
+              "countdown" : "TIME UP" ,
               "location" : "Location: Price Center ",
               "id" : 0
 	}

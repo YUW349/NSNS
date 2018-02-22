@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "engine-handlebars": "^0.8.2",
-    "express": "3.x",
-    "express3-handlebars": "*",
+    "express": "^3.21.2",
+    "express3-handlebars": "^0.5.2",
     "helper-link-to": "^0.3.0",
     "mongodb": "*",
     "mongoose": "*"
