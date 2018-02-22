@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-
+app.get('/home', index.viewHome);
 app.get('/home', home.login); 
 app.get('/home',home.view);
 app.get('/input',input.addNewTask);
