@@ -27,50 +27,6 @@ p{
 }
 
 
-/*.hamburger {
-	cursor: pointer;
-	padding: 10px 20px;
-	display: block;
-
-}
-
-.line {
-	border-bottom: 3px solid;
-	width: 30px;
-
-	margin-bottom: 6px;
-}
-
-.line: last-child {
-	margin-bottom: 0;
-}
-
-.menu{
-	border-style: groove;
-	width: 80%;
-	margin: 0 auto;
-	padding: 0;
-	display: none;
-}
-
-.menu li{
-	list-style: none;
-	display: block;
-	padding: 20px;
-
-}
-
-
-
-.menu li a
-{
-	text-decoration: none;
-}
-
-.active{
-	display: block;
-}*/
-
 #detail {
 	font-size: 0.8em;
 	position:relative;
@@ -78,30 +34,22 @@ p{
 	margin-bottom: 0px;
 }
 
-/*
-ul.tasks{
-	width:89%;
-	float: left;
-}
-*/
-
 
 
 .addButton{
 	cursor: pointer;
 	float:right;
-	position:relative;
-	right:-4px;
-	top: -50px;
 
 }
 
 #logout{
 	cursor: pointer;
+	float:left;
+}
+
+#Done{
+	cursor: pointer;
 	float:right;
-	position:relative;
-	right:339px;
-	top: -50px;
 }
 
 .password{
@@ -127,15 +75,16 @@ text-align: center;
 	width: 70%;
 }
 
+#location {
+	cursor: pointer;
+	float:left;
+}
+
 .backButton{
 	cursor: pointer;
 	float:left;
-	position: fixed;
-	left:15px;
-	top:0px;
-	
-
 }
+
 
 
 .intro {
