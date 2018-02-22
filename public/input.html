@@ -16,10 +16,18 @@
 	<body>
 		<form id="addNewTaskForm" role = "page" method="get" action="/input">
 		<div class="header">
-		<h1>Add Task</h1>
-	    </div>
-		<img id="logout" src = "/image/back.jpg" width="20" height="29" onclick="goBack()">
 
+		<div class ="taskname">
+
+		<h1> 
+			<img id="logout" src = "/image/back.jpg" width="20" height="29" onclick="goBack()"> 
+			Add Task
+			<img id="Done" src = "/image/done.jpg" width="22" height="27" > 
+		</h1>
+
+
+	</div>
+	    </div>
 
 		<div class ="taskname">
 			<label for="taskname">Task Name:</label><br>
@@ -117,11 +125,9 @@
 
 		<div class="location">
 			<label for="location">Location:</label><br>
-			<input type="text" id="location" 
-			value = "Price Center" name="location" disabled>
-		</div>
-
-		<a href="/testmap.html"><input type="button" value="Current Location"></a>
+			<input type="text" id="location" value = "Price Center" name="location" disabled>
+			<a href="/testmap.html"><img id="location" src = "/image/location.jpg" width="15" height="20"> </a>
+		</div><br>
 
 		<div class="repeat">
 			<label for="repetition">Repeat:</label><br>
@@ -133,6 +139,7 @@
 			<input type="radio" name="date" value="5"> F
 			<input type="radio" name="date" value="6"> S
 		</div>
+
 		<div class="notification">
 			<label for="notification">Notification:</label><br>
 			<input type="radio" name="repeat" value="Vibration Only" checked> Vibration Only 
