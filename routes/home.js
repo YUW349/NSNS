@@ -2,7 +2,7 @@
 /*
  * GET home page.
  */
-var data = require('../tasks.json');
+var data = require('../public/tasks.json');
 var data2 = require('../accountInfo.json');
 exports.view = function(req, res){
   res.render('home',data);
