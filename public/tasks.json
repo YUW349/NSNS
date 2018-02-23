@@ -22,7 +22,7 @@
 		"taskname" : "Task Name: Get quote from Imprints  " ,
               "time" : "12:32:30" ,
               "countdown" : "TIME UP" ,
-              "location" : "Location: Price Center ",
+              "location" : "location not set ",
               "id" : 2,
               "onsetTime":30000,
               "viewAlt" : false
