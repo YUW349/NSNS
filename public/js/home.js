@@ -10,6 +10,7 @@ xmlhttp.open("GET", url, false);
 xmlhttp.send();
 console.log(xmlhttp.responseText);
 var data = JSON.parse(xmlhttp.responseText);
+console.log(data);
 /*
 var data = JSON.parse(this.responseText);
  * Function that is called when the document is ready.
@@ -71,7 +72,7 @@ var x = setInterval(function() {
 	// If the count down is finished, write some text 
 	for(var i = 0; i< count; i++){
 
-		var countDownDate = new Date("Feb 22, 2018 " + data.tasks[i].time).getTime();
+		var countDownDate = new Date("Feb 23, 2018 " + data.tasks[i].time).getTime();
 		var distance = countDownDate - now;
 
 		// Time calculations for days, hours, minutes and seconds

@@ -35,12 +35,12 @@
     <p>{{location}}</p>
     {{# if viewAlt}}
 <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
-		<source src="/time.m4a" type="audio/mpeg">
+		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 		{{else}}
 		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
-		<source src="/pricecenter.m4a" type="audio/mpeg">
+		<source src="/time.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 		{{/if}}
