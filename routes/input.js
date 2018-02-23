@@ -14,6 +14,8 @@ exports.addNewTask = function(req,res){
 		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		/*var audio = new Audio("");
+		audio.src = '/sonosaki.mp3';*/
 		if(distance<0){
         		var countdown = "TIME UP";
 				}else{
@@ -27,6 +29,11 @@ exports.addNewTask = function(req,res){
 				"location" : "Location: " + location,
 				"id" : count
 		}
+	/*var x = document.getElementById("myAudio"); 
+
+		function playAudio() { 
+		x.play(); 
+	} */
 
     console.log(count);
 	//console.log(newTask);
