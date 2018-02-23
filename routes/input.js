@@ -26,7 +26,7 @@ exports.addNewTask = function(req,res){
 	            "taskname" : "Task Name: " + taskname,
 				"time" : "Time: " + time+time2+time3,
 				"countdown" : countdown,
-				"location" : "Location: " + location,
+				"location" : "Location: Price Center " ,
 				"id" : count
 		}
 	/*var x = document.getElementById("myAudio"); 

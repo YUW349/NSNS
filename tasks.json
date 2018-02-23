@@ -5,20 +5,26 @@
               "time" : "Time: 12:30:30" ,
               "countdown" : "TIME UP" ,
               "location" : "Location: Price Center ",
-              "id" : 0
+              "onsetTime" : "500",
+              "id" : 0,
+              "viewAlt": false
           },
           {
 		"taskname" : "Task Name: Get canopy from storage " ,
-              "time" : "Time: 12:30:30" ,
+              "time" : "Time: 12:31:00" ,
               "countdown" : "TIME UP" ,
-              "location" : "Location: Price Center ",
-              "id" : 1
+              "location" : "Location: not set",
+              "onsetTime" : "4000",
+              "id" : 1,
+              "viewAlt": true
 	},
 	         {
 		"taskname" : "Task Name: Get quote from Imprints  " ,
-              "time" : "Time: 12:30:30" ,
+              "time" : "Time: 12:32:30" ,
               "countdown" : "TIME UP" ,
-              "location" : "Location: Price Center ",
-              "id" : 2
+              "location" : "Location: not set ",
+              "onsetTime" : "8000",
+              "id" : 2,
+              "viewAlt": true
 	}
 	]}
