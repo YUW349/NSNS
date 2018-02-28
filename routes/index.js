@@ -5,6 +5,11 @@ exports.view = function(req,res){
 }
 
 exports.viewHome = function(req,res){
+    data["viewAlt"] = false;
+	res.render('home',data);
+}
 
+exports.viewHomeAlt = function(req,res){
+    data["viewAlt"] = true;
 	res.render('home',data);
 }

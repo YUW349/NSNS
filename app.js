@@ -38,10 +38,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/home.html/viewAlt',home.viewAlt);
+//app.get('/viewAlt',home.viewAlt);
+app.get('/home/viewAlt', index.viewHomeAlt);
 app.get('/home', index.viewHome);
 app.get('/home', home.login); 
-app.get('/home',home.view);
+//app.get('/home',home.view);
 app.get('/input',input.addNewTask);
 // Example route
 // app.get('/users', user.list);
