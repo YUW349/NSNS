@@ -1,6 +1,28 @@
 <!doctype html>
 <html>
 	<head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114578698-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114578698-2');
+</script>
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-114578698-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 		<title>Landing Page</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<link href="/css/style.css" rel="stylesheet">
@@ -49,11 +71,12 @@
 		{{/if}}
 			<div class="notification">
 			<label for="notification">Notification:</label><br>
-			<input type="checkbox" id="repeat" name="date" value="Speaker">Sound
-			<input type="checkbox" id="repeat" name="date" value="Vibration">Vibration
-			<input type="checkbox" id="repeat" name="date" value="Headphones">Headphones
+			<input type="radio" id="note" name="{{id}}" value="Speaker">Speaker
+			<input type="radio" id="note" name="{{id}}" value="Vibration" >Vibration
+			<input type="radio" id="note" name="{{id}}" value="Headphones" checked>Headphones
 		</div>
-		
+
+
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
 </li>
 </ul>

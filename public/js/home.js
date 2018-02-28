@@ -10,10 +10,16 @@ var data = JSON.parse(this.responseText);
  */
 function initializePage() {
 	$('.deletingTask').click(remove);
-
+    $('input').click(analytics);
 	//$('#colorBtn').click(randomizeColors);
 }
 
+
+function analytics(e){
+        e.preventDefault();
+		ga("send","event","input","click");
+		console.log("u suck");
+	}
 
 function remove(e){
 	e.preventDefault();
