@@ -38,7 +38,7 @@ exports.addNewTask = function(req,res){
 				"location" : "Location: Price Center " ,
 				"id" : count,
 				"onsetTime" : distance,
-				"viewAlt" : false
+				"soundAlt" : false
 
 		}
 	/*var x = document.getElementById("myAudio"); 
