@@ -3,14 +3,7 @@
 $(document).ready(function() {
 	initializePage();
 })
-var xmlhttp = new XMLHttpRequest();
-var url = "../tasks.json";
-    
-xmlhttp.open("GET", url, false);
-xmlhttp.send();
-console.log(xmlhttp.responseText);
-var data = JSON.parse(xmlhttp.responseText);
-console.log(data);
+
 /*
 var data = JSON.parse(this.responseText);
  * Function that is called when the document is ready.
@@ -58,21 +51,33 @@ if(taskLength > 0) {
 }
 
 var x = setInterval(function() {
+	var xmlhttp = new XMLHttpRequest();
+	var url = "../tasks.json";
 
-	console.log(data);
+	xmlhttp.open("GET", url, false);
+	xmlhttp.send();
+
+	//console.log(xmlhttp.responseText);
+	var data = JSON.parse(xmlhttp.responseText);
+	//console.log(data);
+	xmlhttp.abort();
+	var tasks = document.getElementsByClassName('tasklist');
+	console.log(tasks);
+	var times = [];
+	console.log(times);
 	// var data = require("../../tasks.json");
-	var count = Object.keys(data.tasks).length ;
+	var count = Object.keys(tasks).length ;
 	// Get todays date and time
 	var now = new Date().getTime();
 
 	// Find the distance between now an the count down date
-	
-
+	for(var i = 0; i< count; i++){
+		times.push(tasks[i].getElementsByTagName('p')[1].innerHTML);
+	}
 	// Display the result in the element with id="demo"
 	// If the count down is finished, write some text 
-	for(var i = 0; i< count; i++){
-
-		var countDownDate = new Date("Feb 23, 2018 " + data.tasks[i].time).getTime();
+	for(var i = 0; i< count; i++){	
+		var countDownDate = new Date("Feb 28, 2018 " + times[i]).getTime();
 		var distance = countDownDate - now;
 
 		// Time calculations for days, hours, minutes and seconds
@@ -85,9 +90,7 @@ var x = setInterval(function() {
 			}else{
 			var countdown = "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 			}
-
-		data.tasks[i].countdown = countdown;
-		var main = document.getElementById(data.tasks[i].id);
+		var main = document.getElementById(tasks[i].getAttribute('id'));
 		main.getElementsByTagName('div')[0].innerHTML = countdown;
 	}
 	}, 1000);
