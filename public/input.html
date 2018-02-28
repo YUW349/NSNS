@@ -17,17 +17,15 @@
 		<form id="addNewTaskForm" role = "page" method="get" action="/input">
 		<div class="header">
 
-		<div class ="taskname">
-
-		<h1> 
-			<img id="logout" src = "/image/back.jpg" width="20" height="29" onclick="goBack()"> 
-			Add Task
-			<input  type="image" src = "/image/done.jpg" width="22" height="27" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
-		</h1>
-
+	<h1> 
+			<div id="AddTitle"> Add Task </div>
+			<input id="backButton" value="BACK" onclick="goBack()"></input>
+			<input type="submit" id="submitBtn" class="btn btn-default" value="DONE"></input>
+	</h1>
+	
 
 	</div>
-	    </div>
+	    
 
 		<div class ="taskname">
 			<label for="taskname">Task Name:</label><br>
