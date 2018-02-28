@@ -7,7 +7,9 @@
               "location" : "Location: Price Center ",
               "id" : 0,
               "onsetTime":500,
-              "viewAlt" : true
+              "soundAlt" : true
+
+
           },
           {
 		"taskname" : "Task Name: Get canopy from storage " ,
@@ -16,7 +18,7 @@
               "location" : "Location: Price Center ",
               "id" : 1,
               "onsetTime":20000,
-               "viewAlt" : true
+               "soundAlt" : true
 	},
 	         {
 		"taskname" : "Task Name: Get quote from Imprints  " ,
@@ -25,6 +27,6 @@
               "location" : "location not set ",
               "id" : 2,
               "onsetTime":30000,
-              "viewAlt" : false
+              "soundAlt" : false
 	}
 	]}

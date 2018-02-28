@@ -25,15 +25,105 @@
 
 		</div>
 
-{{#each tasks}} 
 
+		<!-- > AB TEST VERSION A <-->
+{{#if viewAlt}}
+{{#each tasks}} 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
 	<p>{{taskname}}</p>
     <p>{{time}}</p> 
     <div class ="countdown">{{countdown}}</div> 
     <p>{{location}}</p>
-    {{# if viewAlt}}
+    {{#if soundAlt}}
+<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/pricecenter.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{else}}
+		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/time.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{/if}}
+		<div class="notification">
+			<label for="notification">Notification:</label><br>
+			<input type="checkbox" id="repeat" name="date" value="Speaker">Sound
+			<input type="checkbox" id="repeat" name="date" value="Vibration">Vibration
+			<input type="checkbox" id="repeat" name="date" value="Headphones">Headphones
+		</div>
+     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+</li>
+</ul>
+{{/each}}
+
+{{else}}
+{{#each tasks}} 
+<ul class="tasks">
+	<li class ="tasklist" id= "{{id}}">
+	<p>{{taskname}}</p>
+    <p>{{time}}</p> 
+    <div class ="countdown">{{countdown}}</div> 
+    <p>{{location}}</p>
+    {{#if soundAlt}}
+<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/pricecenter.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{else}}
+		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/time.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{/if}}
+		
+     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+</li>
+</ul>
+{{/each}}
+{{/if}}
+
+<!--> ABTEST VERSION B<-->
+
+{{#if viewAlt}}
+{{#each tasks}} 
+<ul class="tasks">
+	<li class ="tasklist" id= "{{id}}">
+	<p>{{taskname}}</p>
+    <p>{{time}}</p> 
+    <div class ="countdown">{{countdown}}</div> 
+    <p>{{location}}</p>
+    {{#if soundAlt}}
+<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/pricecenter.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{else}}
+		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<source src="/time.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+		{{/if}}
+		<div class="notification">
+			<label for="notification">Notification:</label><br>
+			<input type="checkbox" id="repeat" name="date" value="Speaker">Sound
+			<input type="checkbox" id="repeat" name="date" value="Vibration">Vibration
+			<input type="checkbox" id="repeat" name="date" value="Headphones">Headphones
+		</div>
+     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+</li>
+</ul>
+{{/each}}
+
+{{else}}
+{{#each tasks}} 
+<ul class="tasks">
+	<li class ="tasklist" id= "{{id}}">
+	<p>{{taskname}}</p>
+    <p>{{time}}</p> 
+    <div class ="countdown">{{countdown}}</div> 
+    <p>{{location}}</p>
+    {{#if soundAlt}}
 <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
@@ -48,7 +138,7 @@
 </li>
 </ul>
 {{/each}}
-
+{{/if}}
 		
 
 
