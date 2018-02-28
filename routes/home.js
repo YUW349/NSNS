@@ -6,13 +6,13 @@ var data = require('../public/tasks.json');
 var data2 = require('../accountInfo.json');
 exports.view = function(req, res){
 
-  data['viewAlt'] = true;
+  data['viewAlt'] = false;
   res.render('home',data);
 };
 
 exports.viewAlt = function(req, res){
 
-  data['viewAlt'] = false;
+  data['viewAlt'] = true;
   res.render('home',data);
 };
 
