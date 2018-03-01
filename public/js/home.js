@@ -10,7 +10,7 @@ var data = JSON.parse(this.responseText);
  */
 function initializePage() {
 	$('.deletingTask').click(remove);
-    $('input').click(analytics);
+    $('.notification').click(analytics);
 	//$('#colorBtn').click(randomizeColors);
 }
 
