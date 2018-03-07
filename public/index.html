@@ -1,58 +1,64 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Login Page</title>
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<link href="/css/style.css" rel="stylesheet">
-	</head>
-	<body>
+  <head>
 
-		<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      :'2037252603208547' ,
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.12'
-    });
-  };
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+    </style>
+  </head>
+  <body background="/background.png" link="white">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      :'2037252603208547' ,
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v2.12'
+        });
+      };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+      <br>
+      <br>
+      <br>
+      <img src="/logo.png" alt="Logo" style="width:70%;">
+        <form id="userLogin" role = "page" method="get" action="./home">
 
-		<div class="header">
-			<h1>Login</h1>
-			<p class="facebookLogin"> Facebook login
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-</p>
-		</div>
-	  
-	  <form id="userLogin" role = "page" method="get" action="/home">
-		<div class="Login">
-			<div class ="username">
-			<label for="username">username:</label><br>
-    		<input type="text" id="userLogin"  name="userName" value = "ThePrettyGubbala"><br>
-    	</div>
+      <div class="Login">
+        <br>
+        <br>
+        <div class ="username">
+            <input type="text" id="userLogin"  name="userName" value = "NSNSHooray"><br>
+          </div>
 
-    	<div class ="password">
-    		<label for="password">password:</label><br>
-    		<input type="password" id="userpassword" name="password" value = "12345678"><br>
-    	</div>
-    		
-    			<input id="loginButton"  type = "submit" value="Login">
-			
-    	</div>
-    </form>
-	</body>
-		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-
-<script src="/js/facebook.js"></script>
+          <div class ="password">
+            <input type="password" id="userpassword" name="password" value = "12345678"><br>
+          </div>
+          <input id="loginButton" type = "submit" value="Log In">
+          <div class="facebookLogin">
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="xlarge"></fb:login-button>
+        </div>
+        <br>
+          <p align="center"><a href="/privacy.html">PRIVACY POLICY</a></p>
+      </div>  
+        </form>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  {{> facebook}}
+  <script src="/js/facebook.js"></script>
 </html>

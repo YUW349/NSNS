@@ -14,6 +14,24 @@
 		</style>
 	</head>
 	<body background="/background.png" link="white">
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      :'2037252603208547' ,
+					cookie     : true,
+					xfbml      : true,
+					version    : 'v2.12'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 			<br>
 			<br>
 			<br>
@@ -30,14 +48,13 @@
     			<div class ="password">
     				<input type="password" id="userpassword" name="password" value = "12345678"><br>
     			</div>
-   				<input id="loginButton" type = "submit" value="Log in" style="float: left;">
-   				<p class="facebookLogin">
+   				<input id="loginButton" type = "submit" value="Log In">
+   				<div class="facebookLogin">
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="xlarge"></fb:login-button>
-				</p>
+				</div>
 				<br>
     			<p align="center"><a href="/privacy.html">PRIVACY POLICY</a></p>
 		 	</div>	
-    	
     		</form>
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
