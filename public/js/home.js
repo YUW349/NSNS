@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 	initializePage();
+
 })
 
 /*
@@ -12,24 +13,35 @@ function initializePage() {
 	$('.deletingTask').click(remove);
     $('.notification').click(analytics);
     $('.edit').click(editTask);
-    $('.addTaskk').click(showAdd);
-　　　$('.btn btn-default').click(clickEvent);
+    $('#addTaskk').click(showAdd);
+　　 $('.addButton').click(collectTimeA);
+	$('.btn.btn-default').click(collectTimeB);
+	console.log($('.btn.btn-default'));
 	//$('#colorBtn').click(randomizeColors);
 }
 
-function clickEvent(e){
-var a = new Date();
-var add = a.getDate();
+var startTime;
 
-$('.btn btn-default').click(function(e){
-var b = new Date();
-var save = b.getDate();
+function collectTimeA(e){
 
-var duration = save - add ;
-
-});
-
+	startTime = new Date();
+	startTime = startTime.getTime();
+	console.log("startTime is the " + startTime);
 }
+
+var endTime;
+
+function collectTimeB(e){
+	console.log("startTime is the " + startTime);
+	endTime = new Date();
+	endTime = endTime.getTime();
+	console.log("endTime is the " + endTime);
+	var duration = endTime - startTime;
+	ga("send","event","duration","click",duration);
+	console.log("duration is " + duration);
+}
+
+
 
 function cancel(e){
 	var introBar = document.getElementsByClassName("intro")[0];
