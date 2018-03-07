@@ -124,7 +124,7 @@ var x = setInterval(function() {
 	// Display the result in the element with id="demo"
 	// If the count down is finished, write some text 
 	for(var i = 0; i< count; i++){	
-		var countDownDate = new Date("Mar 16, 2018 " + times[i]).getTime();
+		var countDownDate = new Date("Mar 8, 2018 " + times[i]).getTime();
 		var distance = countDownDate - now;
 
 		// Time calculations for days, hours, minutes and seconds
