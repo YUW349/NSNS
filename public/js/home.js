@@ -16,7 +16,7 @@ function initializePage() {
 
 
 function analytics(e){
-        e.preventDefault();
+        // e.preventDefault();
 		ga("send","event","input","click");
 		console.log("u suck");
 	}
