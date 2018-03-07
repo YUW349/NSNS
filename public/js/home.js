@@ -37,10 +37,6 @@ if (confirm("Delete the task?")) {
     var txt = "Task remained!";
 }
 
-$.get("../tasks.json",function(data){
-
-	data.splice(projectId,1);
-})
 	}
 
 function goBack(){
