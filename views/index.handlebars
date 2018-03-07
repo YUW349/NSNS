@@ -13,21 +13,22 @@
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 </p>
 		</div>
-	  
 	  <form id="userLogin" role = "page" method="get" action="./home">
+
 		<div class="Login">
 			<div class ="username">
-			<label for="username">username:</label><br>
+			<label for="username">Username</label><br>
     		<input type="text" id="userLogin"  name="userName" value = "NSNSHooray"><br>
     	</div>
 
     	<div class ="password">
-    		<label for="password">password:</label><br>
+    		<label for="password">Password</label><br>
     		<input type="password" id="userpassword" name="password" value = "12345678"><br>
     	</div>
+   
     		
-    			<input type = "submit" value="Login">
-			
+   <input id="loginButton" type = "submit" value="Login">
+		 </div>	
     	
     </form>
     <p align="center"><a href="/privacy.html">Privacy Policy</a></p>

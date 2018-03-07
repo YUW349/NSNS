@@ -80,7 +80,9 @@ ga('send', 'pageview');
 
 		
 {{#if viewAlt}}
+
 {{#each tasks}} 
+
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
 	<p>{{taskname}}</p>
@@ -88,10 +90,12 @@ ga('send', 'pageview');
     <div class ="countdown">{{countdown}}</div> 
     <p>{{location}}</p>
     {{#if soundAlt}}
-<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+   <div class="audioBar">
+<audio  controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
+</div>
 		{{else}}
 		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/time.m4a" type="audio/mpeg">
@@ -101,18 +105,21 @@ ga('send', 'pageview');
 			<div class="notification">
 			<label for="notification">Notification:</label><br>
 			<input type="radio" id="note" name="{{id}}" value="Speaker">Speaker
-			<input type="radio" id="note" name="{{id}}" value="Vibration" >Vibration
-			<input type="radio" id="note" name="{{id}}" value="Headphones" checked>Headphones
+			<input type="radio" id="note" name="{{id}}" value="Vibration" >Vibration<br>
+			<input type="radio" id="note" name="{{id}}" value="Headphones" checked>Headphones<br>
 		</div>
 
 
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
 </li>
 </ul>
+
 {{/each}}
 
 {{else}}
+
 {{#each tasks}} 
+
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
 	<p>{{taskname}}</p>
@@ -120,7 +127,7 @@ ga('send', 'pageview');
     <div class ="countdown">{{countdown}}</div> 
     <p>{{location}}</p>
     {{#if soundAlt}}
-<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+<audio id="audioBar" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
@@ -135,6 +142,7 @@ ga('send', 'pageview');
 </li>
 </ul>
 {{/each}}
+
 {{/if}}
 
 

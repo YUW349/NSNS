@@ -25,7 +25,66 @@ p{
 	padding: 2px;
 }
 
+/*Login Page*/
+.Login{
+ height: 400px;
+  margin: 50px auto 0;
+  width: 298px;
+}
 
+input[type="password"], input[type="text"] {
+  border: 1px solid #a1a3a3;
+  border-radius: 4px;
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  height: 45px;
+  padding-left: 37px;
+  transition: box-shadow 0.3s;
+  width: 280px;
+  font-size: 17px;
+}
+input[type="password"]:focus, input[type="text"]:focus {
+  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+  outline: 0;
+}
+
+
+.Login label{
+	float:left;
+	font-size: 20px;
+	margin-left:20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	opacity: 0.7;
+}
+
+#loginButton{
+  width:240px;
+  height:40px;
+   margin: 37px 0 0 29px;
+  text-align:center;
+  display:block;
+
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  text-shadow:1px 1px 0px #7BABEE;
+  padding-top:6px;
+
+  cursor:pointer;
+  border: none;  
+  background-color:#7BABEE;
+  background-image: linear-gradient(top,#7BABEE,#3111);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius:5px;
+  box-shadow: inset 0px 1px 0px #71A4EB, 0px 5px 0px 0px #71A4EB, 0px 10px 5px #999;
+}
+
+/*task page*/
 #detail {
 	font-size: 0.8em;
 	position:relative;
@@ -109,16 +168,40 @@ text-align: center;
 	display: block;
 }
 
+audio { width: 250px;  }
+
+ul.tasks {
+	margin-right: 38px;
+}
+
 ul.tasks li {
 	text-align: center;
 	background-color: white;
-	width:80%;
 	padding: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	list-style: none;
-	width: 91.5%;
-	padding: 13px;
 	margin-bottom: 50px;
-
 }
 
+
+/*setting page*/
+
+#addNewTaskForm label{
+
+	font-size: 18px;
+	font-weight: bold;
+	opacity: 0.7;
+}
+
+#time, #time2, #time3 {
+	font-size:16px;
+}
+
+#locationPic {
+	margin-left: 2px;
+	margin-top: 6px;
+}
+
+input[type="checkbox"],  {
+	font-size:16px;
+}
