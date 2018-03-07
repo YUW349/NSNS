@@ -5,36 +5,40 @@
 		<title>Login Page</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<link href="css/style.css" rel="stylesheet">
+		<style>
+			img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		</style>
 	</head>
-	<body>
-		<div class="header">
-			<h1>Login</h1>
-			<p class="facebookLogin"> Facebook login
+	<body background="/background.png">
+			<br>
+			<img src="/logo.png" alt="Paris" style="width:75%;">
+	  		<form id="userLogin" role = "page" method="get" action="./home">
+
+			<div class="Login">
+				<div class ="username">
+					<label for="username">USERNAME</label><br>
+    				<input type="text" id="userLogin"  name="userName" value = "NSNSHooray"><br>
+    			</div>
+
+    			<div class ="password">
+    				<label for="password">PASSWORD</label><br>
+    				<input type="password" id="userpassword" name="password" value = "12345678"><br>
+    			</div>
+   				<input id="loginButton" type = "submit" value="Login">
+   				<p class="facebookLogin" align=center> Facebook login
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-</p>
-		</div>
-	  <form id="userLogin" role = "page" method="get" action="./home">
-
-		<div class="Login">
-			<div class ="username">
-			<label for="username">Username</label><br>
-    		<input type="text" id="userLogin"  name="userName" value = "NSNSHooray"><br>
-    	</div>
-
-    	<div class ="password">
-    		<label for="password">Password</label><br>
-    		<input type="password" id="userpassword" name="password" value = "12345678"><br>
-    	</div>
-   
-    		
-   <input id="loginButton" type = "submit" value="Login">
-		 </div>	
+				</p>
+    			<p align="center"><a href="/privacy.html">Privacy Policy</a></p>
+		 	</div>	
     	
-    </form>
-    <p align="center"><a href="/privacy.html">Privacy Policy</a></p>
+    		</form>
 	</body>
-		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	{{> facebook}}
-<script src="/js/facebook.js"></script>
+	<script src="/js/facebook.js"></script>
 </html>
