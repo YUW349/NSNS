@@ -13,26 +13,29 @@
 			}
 		</style>
 	</head>
-	<body background="/background.png">
+	<body background="/background.png" link="white">
 			<br>
-			<img src="/logo.png" alt="Paris" style="width:75%;">
+			<br>
+			<br>
+			<img src="/logo.png" alt="Logo" style="width:70%;">
 	  		<form id="userLogin" role = "page" method="get" action="./home">
 
 			<div class="Login">
+				<br>
+				<br>
 				<div class ="username">
-					<label for="username">USERNAME</label><br>
     				<input type="text" id="userLogin"  name="userName" value = "NSNSHooray"><br>
     			</div>
 
     			<div class ="password">
-    				<label for="password">PASSWORD</label><br>
     				<input type="password" id="userpassword" name="password" value = "12345678"><br>
     			</div>
-   				<input id="loginButton" type = "submit" value="Login">
-   				<p class="facebookLogin" align=center> Facebook login
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+   				<input id="loginButton" type = "submit" value="Log in" style="float: left;">
+   				<p class="facebookLogin">
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="xlarge"></fb:login-button>
 				</p>
-    			<p align="center"><a href="/privacy.html">Privacy Policy</a></p>
+				<br>
+    			<p align="center"><a href="/privacy.html">PRIVACY POLICY</a></p>
 		 	</div>	
     	
     		</form>

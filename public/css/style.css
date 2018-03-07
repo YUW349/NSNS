@@ -16,6 +16,7 @@ h1 {
 }
 
 p{
+	color: #D3D3D3;
 	opacity: 0.7;
 }
 
@@ -34,20 +35,20 @@ p{
 }
 
 input[type="password"], input[type="text"] {
-  border: 1px solid #a1a3a3;
-  border-radius: 4px;
+  border: 3px solid #ffffff;
+  background-color:rgba(0, 0, 0, 0.23);
   box-shadow: 0 1px #fff;
   box-sizing: border-box;
   height: 45px;
-  padding-left: 37px;
+  padding-left: 20px;
   transition: box-shadow 0.3s;
-  width: 280px;
+  width: 270px;
   font-size: 17px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: white;
+  opacity: 0.7;
 }
-input[type="password"]:focus, input[type="text"]:focus {
-  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
-  outline: 0;
-}
+
 
 
 .Login label{
@@ -62,29 +63,21 @@ input[type="password"]:focus, input[type="text"]:focus {
 }
 
 #loginButton{
-  width:240px;
-  height:40px;
-   margin: 37px 0 0 29px;
+  width:127px;
+  height:38px;
+  margin: 0px 0 0 18px;
   text-align:center;
   display:block;
 
-  font-size:16px;
-  font-weight:bold;
-  color:#fff;
+  font-size:25px;
+  font-weight:normal;
+  color: white;
   text-decoration:none;
-  text-transform:uppercase;
-  text-shadow:1px 1px 0px #7BABEE;
   padding-top:6px;
 
   cursor:pointer;
   border: none;  
-  background-color:#7BABEE;
-  background-image: linear-gradient(top,#7BABEE,#3111);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius:5px;
-  box-shadow: inset 0px 1px 0px #71A4EB, 0px 5px 0px 0px #71A4EB, 0px 10px 5px #999;
+  background-color: #ffa232;
 }
 
 /*task page*/
