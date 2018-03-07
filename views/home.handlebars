@@ -4,47 +4,6 @@
 
 
 
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='170650636-1',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
-
-
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114578698-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114578698-2');
-</script>
-
-
-
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-114578698-2', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
 
 		<title>Landing Page</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
@@ -58,10 +17,20 @@ ga('send', 'pageview');
 
 	
 	<body>
+
+
+		
 	
 		<div class="header">
 			<h1>
-				<div class="AddTitle"> <a href = "/faq.html"> How to? </a> </div>
+				{{#if viewAlt}}
+				<div class="AddTitle"> <a href = "/faq.html"> FAQ </a> </div>
+
+				{{else}}
+				<div class="AddTitle"> <a href = "/faq.html"> How To? </a> </div>
+
+				{{/if}}
+
 				<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
 				<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD"></input>
 				</a>
@@ -79,7 +48,8 @@ ga('send', 'pageview');
 
 
 		
-{{#if viewAlt}}
+
+<!--{{#if viewAlt}}
 
 {{#each tasks}} 
 
@@ -117,8 +87,13 @@ ga('send', 'pageview');
 {{/each}}
 
 {{else}}
+{{/if}}
+-->
+
+
 
 {{#each tasks}} 
+
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
@@ -136,15 +111,15 @@ ga('send', 'pageview');
 		<source src="/time.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
-		{{/if}}
-
+		
+{{/if}}
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
      <a href="/input.html" class="notification2"> <img src = "/image/Edit.jpg" width="21" height="21"></a>
 </li>
 </ul>
 {{/each}}
 
-{{/if}}
+
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
