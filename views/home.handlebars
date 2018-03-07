@@ -11,63 +11,146 @@
 	</head>
 	
 
-
-
-
-
 	
 	<body>
 
 
-		
+		{{#if viewAlt}}
+
+
 	
 		<div class="header">
 			<h1>
-				{{#if viewAlt}}
 				<div class="AddTitle"> <a href = "/faq.html"> FAQ </a> </div>
 
-				{{else}}
-				<div class="AddTitle"> <a href = "/faq.html"> How To? </a> </div>
-
-				{{/if}}
-
 				<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
-				<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD"></input>
 				</a>
 			</h1>
 		</div>
 
-		<nav>
-			
-		</nav> 
-		<div class = "intro">
+	
+		<a class="addTaskk" href ="#"> add the task </a>
 			<p>{{welcome}}</p>
 			<p>To add a new task, click on the + button.</p>
+		
+		<form id="addNewTaskForm" role = "form" method="get" action="/input">
 
+	    
+<div class = "intro">
+		<div class ="taskname">
+			<label for="taskname">Task Name:</label><br>
+			<input type="text" id="taskname" 
+			placeholder="Buy a book..." name="taskname" required>
+		</div>
+
+		<div class="time">
+			<label for="time">Time (Hour:Minute:Second):</label><br>
+			<select id="time" name="time">
+			<option value="00:">AM 12</option>
+  			<option value="01:">AM 01</option>
+			<option value="02:">AM 02</option>
+			<option value="03:">AM 03</option>
+			<option value="04:">AM 04</option>
+			<option value="05:">AM 05</option>
+			<option value="06:">AM 06</option>
+			<option value="07:">AM 07</option>
+			<option value="08:">AM 08</option>
+			<option value="09:">AM 09</option>
+			<option value="10:">AM 10</option>
+			<option value="11:">AM 11</option>
+			<option value="12:">PM 12</option>
+			<option value="13:">PM 01</option>
+			<option value="14:">PM 02</option>
+			<option value="15:">PM 03</option>
+			<option value="16:">PM 04</option>
+			<option value="17:">PM 05</option>
+			<option value="18:">PM 06</option>
+			<option value="19:">PM 07</option>
+			<option value="20:">PM 08</option>
+			<option value="21:">PM 09</option>
+			<option value="22:">PM 10</option>
+			<option value="23:">PM 11</option>
+			</select>
+			:
+			<select id="time2" name="time2">
+			<option value="00:">00</option>
+			<option value="05:">05</option>
+			<option value="10:">10</option>	
+			<option value="15:">15</option>
+			<option value="20:">20</option>	
+			<option value="25:">25</option>
+			<option value="30:">30</option>	
+			<option value="35:">35</option>
+			<option value="40:">40</option>	
+			<option value="45:">45</option>
+			<option value="50:">50</option>
+			<option value="55:">55</option>
+			</select>
+			:
+			<select id="time3" name="time3">
+  			<option value="00">00</option>
+			<option value="30">30</option>
+		    </select>
 		</div>
 
 
-		
 
-<!--{{#if viewAlt}}
+		<div class="location">
+			<label for="location">Location:</label><br>
+			<input type="text" id="location" value = "Price Center" name="location" disabled>
+			<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a>
+		</div><br>
+
+		<div class="repeat">
+			<label for="repetition">Repeat:</label><br>
+
+		
+    <input type="checkbox" id="S1" name="date" value="7">Sun
+  
+    <input type="checkbox" id="M" name="date" value="1">Mon
+  
+    <input type="checkbox" id="T" name="date" value="2">Tue
+  
+    <input type="checkbox" id="W" name="date" value="3">Wed
+  
+    <input type="checkbox" id="T" name="date" value="4">Thu
+  
+    <input type="checkbox" id="F" name="date" value="7">Fri
+  
+    <input type="checkbox" id="S" name="date" value="7">Sat
+  	</div>
+
+		<div class="notification2">
+			<label for="notification2">Notification:</label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker">Speaker
+			<input type="radio" id="note" name="pushnote" value="Vibration">Vibration
+			<input type="radio" id="note" name="pushnote" value="Headphones">Headphones
+		</div>
+
+	 <input type="submit" id="submitB" class="btn btn-default" value="save">
+		 
+	</form>
+
+		</div>
 
 {{#each tasks}} 
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
-	<p>{{taskname}}</p>
-    <p>{{time}}</p> 
+			
+	<p>{{taskname}}</p >
+    <p>{{time}}</p > 
     <div class ="countdown">{{countdown}}</div> 
-    <p>{{location}}</p>
+    <p>{{location}}</p >
     {{#if soundAlt}}
    <div class="audioBar">
-<audio  controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+<audio  controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 </div>
 		{{else}}
-		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<audio controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/time.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
@@ -87,37 +170,59 @@
 {{/each}}
 
 {{else}}
-{{/if}}
--->
 
+<body>
+	
+		<div class="header">
+			<h1>
+			
+				<div class="AddTitle"> <a href = "/faq.html"> How To? </ a> </div>
 
+				<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
+				<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD"></input></a>
+			</h1>
+		</div>
 
-{{#each tasks}} 
+		<nav>
+			
+		</nav> 
+		<div class = "intro">
+			<p>{{welcome}}</p>
+			<p>To add a new task, click on the + button.</p>
+
+		</div>
+
+		{{#each tasks}} 
+
 
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
 	<p>{{taskname}}</p>
-    <p>{{time}}</p> 
+    <p>{{time}}</p > 
     <div class ="countdown">{{countdown}}</div> 
     <p>{{location}}</p>
     {{#if soundAlt}}
-<audio id="audioBar" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+<audio id="audioBar" controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 		{{else}}
-		<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<audio controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/time.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
-		
-{{/if}}
+		{{/if}}
+
+     
+
+
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
-     <a href="/input.html" class="notification2"> <img src = "/image/Edit.jpg" width="21" height="21"></a>
+   <!--  <a href="/input.html" class="notification2"> <img src = "/image/Edit.jpg" width="21" height="21"></a> -->
 </li>
 </ul>
 {{/each}}
+{{/if}}
 
 
 

@@ -43,6 +43,7 @@ app.get('/home/viewAlt', index.viewHomeAlt);
 app.get('/home', index.viewHome);
 app.get('/home', home.login); 
 //app.get('/home',home.view);
+app.get('/input',home.addNewTask);
 app.get('/input',input.addNewTask);
 // Example route
 // app.get('/users', user.list);

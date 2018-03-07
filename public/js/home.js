@@ -11,9 +11,21 @@ var data = JSON.parse(this.responseText);
 function initializePage() {
 	$('.deletingTask').click(remove);
     $('.notification').click(analytics);
+    $('.edit').click(editTask);
+    $('.addTaskk').click(showAdd);
 	//$('#colorBtn').click(randomizeColors);
 }
 
+function showAdd(e){
+	var introBar = document.getElementsByClassName("intro")[0];
+	introBar.style.display = 'block';
+}
+
+function editTask(e){
+
+	e.preventDefault();
+    var projectID = $(this).closest('.tasks').attr('id');
+}
 
 function analytics(e){
         // e.preventDefault();
@@ -46,11 +58,12 @@ function goBack(){
 
 
 //show intro only when no tasks present
-var introBar = document.getElementsByClassName("intro")[0];
-var taskLength = document.getElementsByClassName("tasklist").length;
-if(taskLength > 0) {
-	introBar.style.display = 'none';
-}
+//var introBar = document.getElementsByClassName("intro")[0];
+//var taskLength = document.getElementsByClassName("tasklist").length;
+//if(taskLength > 0) {
+//	introBar.style.display = 'none';
+//}
+
 
 var x = setInterval(function() {
 	var xmlhttp = new XMLHttpRequest();
