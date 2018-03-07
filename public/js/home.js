@@ -13,8 +13,22 @@ function initializePage() {
     $('.notification').click(analytics);
     $('.edit').click(editTask);
     $('.addTaskk').click(showAdd);
-
+　　　$('.btn btn-default').click(clickEvent);
 	//$('#colorBtn').click(randomizeColors);
+}
+
+function clickEvent(e){
+var a = new Date();
+var add = a.getDate();
+
+$('.btn btn-default').click(function(e){
+var b = new Date();
+var save = b.getDate();
+
+var duration = save - add ;
+
+});
+
 }
 
 function cancel(e){
