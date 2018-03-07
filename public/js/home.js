@@ -13,7 +13,13 @@ function initializePage() {
     $('.notification').click(analytics);
     $('.edit').click(editTask);
     $('.addTaskk').click(showAdd);
+
 	//$('#colorBtn').click(randomizeColors);
+}
+
+function cancel(e){
+	var introBar = document.getElementsByClassName("intro")[0];
+	introBar.style.display = 'none';
 }
 
 function showAdd(e){
