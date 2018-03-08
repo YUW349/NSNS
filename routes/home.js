@@ -38,6 +38,7 @@ exports.addNewTask = function(req,res){
   var countDownDate = new Date("Mar 7, 2018 " + time + time2 + time3).getTime();
     var now = new Date().getTime();
     var distance = countDownDate - now;
+    console.log(distance);
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -66,13 +67,14 @@ exports.addNewTask = function(req,res){
         "soundAlt" : false
 
     }
+
   /*var x = document.getElementById("myAudio"); 
 
     function playAudio() { 
     x.play(); 
   } */
 
-    console.log(distance);
+    
   //console.log(newTask);
     data.tasks.push(newTask);
     //console.log(data);
