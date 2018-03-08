@@ -24,14 +24,15 @@ ga('send', 'pageview');
 		}
 		
 	</style>
-	<body onload="collectTimeA()">
+	<body onload="collectTimeA()" background="/background2.png" link="white">
 		<form id="addNewTaskForm" role = "page" method="get" action="/input">
-		<div class="header">
 
-	<h1> 
-			<div id="AddTitle"> <a href="faq.html"> How To? </a> </div>
-			<input id="backButton" class="btn btn-default" value="BACK" onclick="goBack()"></input>
+	<h1>
+			
+			<input id="backButton" class="btn btn-default" value="CANCEL" onclick="goBack()"></input>
 			<input type="submit" id="submitBtn" class="btn btn-default" value="DONE"></input>
+			<br>
+			Adding Task
 	</h1>
 	
 
@@ -39,13 +40,13 @@ ga('send', 'pageview');
 	    
 
 		<div class ="taskname">
-			<label for="taskname">Task Name:</label><br>
-			<input type="text" id="taskname" 
+			<label for="taskname"><h4>Task Name</h4></label><br>
+			<input type="text3" id="taskname" 
 			placeholder="Buy a book..." name="taskname" required>
 		</div>
 
 		<div class="time">
-			<label for="time">Time (Hour:Minute:Second):</label><br>
+			<label for="time"><h4>Time (Hour:Minute:Second)</h4></label><br>
 			<select id="time" name="time">
 			<option value="00:">AM 12</option>
   			<option value="01:">AM 01</option>
@@ -72,7 +73,7 @@ ga('send', 'pageview');
 			<option value="22:">PM 10</option>
 			<option value="23:">PM 11</option>
 			</select>
-			:
+			<h5>:</h5>
 			<select id="time2" name="time2">
 			<option value="00:">00</option>
 			<option value="05:">05</option>
@@ -87,45 +88,45 @@ ga('send', 'pageview');
 			<option value="50:">50</option>
 			<option value="55:">55</option>
 			</select>
-			:
+			<h5>:</h5>
 			<select id="time3" name="time3">
   			<option value="00">00</option>
 			<option value="30">30</option>
 		    </select>
 		</div>
-
-
-
 		<div class="location">
-			<label for="location">Location:</label><br>
-			<input type="text" id="location" value = "Price Center" name="location" disabled>
+			<label for="location"><h4>Location</h4></label><br>
+			<input type="text2" id="location" value = "Price Center" name="location" disabled>
 			<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a>
 		</div><br>
 
 		<div class="repeat">
-			<label for="repetition">Repeat:</label><br>
+			<label for="repetition"><h4>Repeat</h4></label><br>
 
 		
-    <input type="checkbox" id="S1" name="date" value="7">Sun
+    <input type="checkbox" id="S1" name="date" value="7"><h5>Sun</h5>
   
-    <input type="checkbox" id="M" name="date" value="1">Mon
+    <input type="checkbox" id="M" name="date" value="1"><h5>Mon</h5>
   
-    <input type="checkbox" id="T" name="date" value="2">Tue
+    <input type="checkbox" id="T" name="date" value="2"><h5>Tue</h5>
   
-    <input type="checkbox" id="W" name="date" value="3">Wed
+    <input type="checkbox" id="W" name="date" value="3"><h5>Wed</h5>
+    <br>
   
-    <input type="checkbox" id="T" name="date" value="4">Thu
+    <input type="checkbox" id="T" name="date" value="4"><h5>Thu</h5>
   
-    <input type="checkbox" id="F" name="date" value="7">Fri
+    <input type="checkbox" id="F" name="date" value="7"><h5>Fri</h5>
   
-    <input type="checkbox" id="S" name="date" value="7">Sat
+    <input type="checkbox" id="S" name="date" value="7"><h5>Sat</h5>
   	</div>
 
 		<div class="notification2">
-			<label for="notification2">Notification:</label><br>
-			<input type="radio" id="note" name="pushnote" value="Speaker">Speaker
-			<input type="radio" id="note" name="pushnote" value="Vibration">Vibration
-			<input type="radio" id="note" name="pushnote" value="Headphones">Headphones
+			<label for="notification2"><h4>Notification</h4></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h5>Phone current setting</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h5>Headphones and vibration</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h5>Vibration only</h5>
 		</div>
 
 	
