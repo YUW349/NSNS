@@ -2,32 +2,36 @@
 <html>
 	<head>
 	
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='171077587-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
+	<!-- Google Analytics Content Experiment code -->
+	<script>function utmx_section(){}function utmx(){}(function(){var
+	k='171077587-0',d=document,l=d.location,c=d.cookie;
+	if(l.search.indexOf('utm_expid='+k)>0)return;
+	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script><script>utmx('url','A/B');</script>
+	<!-- End of Google Analytics Content Experiment code -->
 
 
 
-
-	
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-114642382-2', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<!-- End Google Analytics -->
+		<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-114642382-2', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+	<style>
+    * {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      color: #FF6347;
+    }
+	</style>
 
 
 
@@ -39,39 +43,33 @@ ga('send', 'pageview');
 	
 
 	
-	<body>
+	<body background="/background2.png" link="white">
 
 
 		{{#if viewAlt}}
 
-
-	
-		<div class="header">
 			<h1>
-				<div class="AddTitle"> <a href = "/faq.html"> FAQ </a> </div>
-
-				<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
-				</a>
+			
+			<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
+			<a id="addTaskk" class="addButton" href ="#"> ADD NEW </a>
+			<br>
+			Upcoming Tasks
 			</h1>
-		</div>
-
-	
-		<a id="addTaskk" class="addButton" href ="#"> add the task </a>
 			<p>{{welcome}}</p>
-			<p>To add a new task, click on the + button.</p>
+			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
 		
 		<form id="addNewTaskForm" role = "form" method="get" action="/input">
 
-	    
-<div class = "intro">
+		<div class = "intro">
+		<h3>ADDING TASK</h3>
 		<div class ="taskname">
-			<label for="taskname">Task Name:</label><br>
+			<label for="taskname"><h4>Task Name</h4></label><br>
 			<input type="text" id="taskname" 
 			placeholder="Buy a book..." name="taskname" required>
 		</div>
-
+		<br>
 		<div class="time">
-			<label for="time">Time (Hour:Minute:Second):</label><br>
+			<label for="time"><h4>Time (Hour:Minute:Second)</h4></label><br>
 			<select id="time" name="time">
 			<option value="00:">AM 12</option>
   			<option value="01:">AM 01</option>
@@ -119,44 +117,45 @@ ga('send', 'pageview');
 			<option value="30">30</option>
 		    </select>
 		</div>
-
-
-
+		<br>
 		<div class="location">
-			<label for="location">Location:</label><br>
-			<input type="text" id="location" value = "Price Center" name="location" disabled>
+			<label for="location"><h4>Location</h4></label><br>
+			<input type="text2" id="location" value = "Price Center" name="location" disabled>
 			<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a>
-		</div><br>
+		</div>
+		<br>
 
 		<div class="repeat">
-			<label for="repetition">Repeat:</label><br>
+			<label for="repetition"><h4>Repeat</h4></label><br>
 
 		
-    <input type="checkbox" id="S1" name="date" value="7">Sun
+    <input type="checkbox" id="S1" name="date" value="7"><h5>Sun</h5>
   
-    <input type="checkbox" id="M" name="date" value="1">Mon
+    <input type="checkbox" id="M" name="date" value="1"><h5>Mon</h5>
   
-    <input type="checkbox" id="T" name="date" value="2">Tue
+    <input type="checkbox" id="T" name="date" value="2"><h5>Tue</h5>
   
-    <input type="checkbox" id="W" name="date" value="3">Wed
+    <input type="checkbox" id="W" name="date" value="3"><h5>Wed</h5>
+    <br>
   
-    <input type="checkbox" id="T" name="date" value="4">Thu
+    <input type="checkbox" id="T" name="date" value="4"><h5>Thu</h5>
   
-    <input type="checkbox" id="F" name="date" value="7">Fri
+    <input type="checkbox" id="F" name="date" value="7"><h5>Fri</h5>
   
-    <input type="checkbox" id="S" name="date" value="7">Sat
+    <input type="checkbox" id="S" name="date" value="7"><h5>Sat</h5>
   	</div>
-
+  	<br>
 		<div class="notification2">
-			<label for="notification2">Notification:</label><br>
-			<input type="radio" id="note" name="pushnote" value="Speaker">Speaker
-			<input type="radio" id="note" name="pushnote" value="Vibration">Vibration
-			<input type="radio" id="note" name="pushnote" value="Headphones">Headphones
+			<label for="notification2"><h4>Notification</h4></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h5>Phone current setting</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h5>Headphones and Vibration</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h5>Vibration only</h5>
 		</div>
-
-	 <input type="submit" id="submitB" class="btn btn-default" value="save">
-	 <input class="btn btn-default" value="Cancel" onclick="cancel()">
-		 
+		<input id="cancel" class="btn btn-default" value="CANCEL" onclick="cancel()">
+		<input type="submit" id="submitB" class="btn btn-default" value="SAVE">
+		<br>
 	</form>
 
 		</div>
@@ -183,11 +182,13 @@ ga('send', 'pageview');
 		Your browser does not support the audio element.
 		</audio>
 		{{/if}}
-			<div class="notification">
-			<label for="notification">Notification:</label><br>
-			<input type="radio" id="note" name="{{id}}" value="Speaker">Speaker
-			<input type="radio" id="note" name="{{id}}" value="Vibration" >Vibration<br>
-			<input type="radio" id="note" name="{{id}}" value="Headphones" checked>Headphones<br>
+		<div class="notification2">
+			<label for="notification2"><h6>Notification</h6></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h6>Phone current setting</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h6>Headphones and vibration</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
 		</div>
 
 
@@ -199,17 +200,17 @@ ga('send', 'pageview');
 
 {{else}}
 
-<body>
+<body background="/background2.png" link="white">
 	
-		<div class="header">
-			<h1>
+		<h1>
 			
-				<div class="AddTitle"> <a href = "/faq.html"> How To? </ a> </div>
-
-				<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
-				<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD"></input></a>
+			<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
+			<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD NEW"></input></a>
+			<br>
+			Upcoming Tasks
 			</h1>
-		</div>
+			<p>{{welcome}}</p>
+			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
 
 		<nav>
 			
