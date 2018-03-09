@@ -14,34 +14,8 @@ function initializePage() {
     $('.notification').click(analytics);
     $('.edit').click(editTask);
     $('#addTaskk').click(showAdd);
-　　 $('.addButton').click(collectTimeA);
-	$('.btn.btn-default').click(collectTimeB);
-	console.log($('.btn.btn-default'));
 	//$('#colorBtn').click(randomizeColors);
 }
-
-var startTime;
-
-function collectTimeA(e){
-
-	startTime = new Date();
-	startTime = startTime.getTime();
-	console.log("startTime is the " + startTime);
-}
-
-var endTime;
-
-function collectTimeB(e){
-	console.log("startTime is the " + startTime);
-	endTime = new Date();
-	endTime = endTime.getTime();
-	console.log("endTime is the " + endTime);
-	var duration = endTime - startTime;
-	ga("send","event","duration","click",duration);
-	console.log("duration is " + duration);
-}
-
-
 
 function cancelTask(e){
 	var introBar = document.getElementsByClassName("intro")[0];
