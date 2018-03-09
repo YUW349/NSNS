@@ -96,7 +96,7 @@ input[type="password"], input[type="text"] {
   height: 45px;
   padding-left: 20px;
   transition: box-shadow 0.3s;
-  width: 100%;
+  width: 90%;
   font-size: 20px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: white;

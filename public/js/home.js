@@ -43,7 +43,7 @@ function collectTimeB(e){
 
 
 
-function cancel(e){
+function cancelTask(e){
 	var introBar = document.getElementsByClassName("intro")[0];
 	introBar.style.display = 'none';
 }
@@ -124,7 +124,7 @@ var x = setInterval(function() {
 	// Display the result in the element with id="demo"
 	// If the count down is finished, write some text 
 	for(var i = 0; i< count; i++){	
-		var countDownDate = new Date("Mar 7, 2018 " + times[i]).getTime();
+		var countDownDate = new Date("Mar 9, 2018 " + times[i]).getTime();
 		var distance = countDownDate - now;
 
 		// Time calculations for days, hours, minutes and seconds
@@ -134,6 +134,7 @@ var x = setInterval(function() {
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 		if(distance<0){
 			var countdown = "TIME UP";
+			$(".countdown").css({'color' : 'red'});
 			}else{
 			var countdown = "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 			}

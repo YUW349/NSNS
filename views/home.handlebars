@@ -29,7 +29,7 @@
 	<style>
     * {
       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-      color: #FF6347;
+      color: rgba(255, 255, 255, 0.5);
     }
 	</style>
 
@@ -154,7 +154,7 @@
 			<input type="radio" id="note" name="pushnote" value="Vibration"><h5>Vibration only</h5>
 		</div>
 
-		<input  class="btn btn-default" value="CANCEL" onclick="cancel()">
+		<input id="cancel" class="btn btn-default" value="CANCEL" onclick=cancelTask()>
 
 		<input type="submit" id="submitB" class="btn btn-default" value="SAVE">
 		<br>
@@ -169,7 +169,7 @@
 			
 	<p>{{taskname}}</p >
     <p>{{time}}</p > 
-    <div class ="countdown">{{countdown}}</div> 
+    <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
     <p>{{location}}</p >
     {{#if soundAlt}}
    <div class="audioBar">
@@ -231,7 +231,7 @@
 	<li class ="tasklist" id= "{{id}}">
 	<p>{{taskname}}</p>
     <p>{{time}}</p > 
-    <div class ="countdown">{{countdown}}</div> 
+    <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
     <p>{{location}}</p>
     {{#if soundAlt}}
 <audio id="audioBar" controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
