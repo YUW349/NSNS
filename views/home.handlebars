@@ -47,7 +47,7 @@
 		<div class="time">
 			<label for="time"><h4>Time (Hour:Minute:Second)</h4></label><br>
 			<select id="time" name="time">
-			<option value="00:">AM 12</option>
+            <option value="00:">AM 12</option>
   			<option value="01:">AM 01</option>
 			<option value="02:">AM 02</option>
 			<option value="03:">AM 03</option>
@@ -142,11 +142,11 @@
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
-			
-	<p>{{taskname}}</p >
+
+	<p>Task Name : {{taskname}}</p >
     <p>{{time}}</p > 
     <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
-    <p>{{location}}</p >
+    <p>Location: {{location}}</p >
     {{#if soundAlt}}
    <div class="audioBar">
 <audio  controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
@@ -171,6 +171,8 @@
 
 
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+        <!-- <a href="#" class="editingTask"> edit </a> -->
+
 </li>
 </ul>
 
@@ -205,10 +207,11 @@
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
-	<p>{{taskname}}</p>
+
+	<p>Task Name: {{taskname}}</p>
     <p>{{time}}</p > 
     <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
-    <p>{{location}}</p>
+    <p>Location: {{location}}</p>
     {{#if soundAlt}}
 <audio id="audioBar" controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
@@ -225,6 +228,8 @@
 
 
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+     <!-- <a href="#" class="editingTask"> edit </a> -->
+
    <!--  <a href="/input.html" class="notification2"> <img src = "/image/Edit.jpg" width="21" height="21"></a> -->
 </li>
 </ul>

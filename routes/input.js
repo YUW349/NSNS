@@ -32,10 +32,13 @@ exports.addNewTask = function(req,res){
 		
 		
 	var newTask = { 
-	            "taskname" : "Task Name: " + taskname,
+	            "taskname" : taskname,
+	            "time1" : time,
+	            "time2" : time2,
+	            "time3" : time3,
 				"time" : time+time2+time3,
 				"countdown" : countdown,
-				"location" : "Location: Price Center " ,
+				"location" : "Price Center " ,
 				"id" : count,
 				"onsetTime" : distance,
 				"soundAlt" : false
@@ -47,13 +50,15 @@ exports.addNewTask = function(req,res){
 		x.play(); 
 	} */
 
-    console.log(distance);
-	//console.log(newTask);
+    //console.log(distance);
+	console.log(newTask);
     data.tasks.push(newTask);
     //console.log(data);
 
     res.render('home',data);
 };
+
+
 
 // var x = setInterval(function() {
 // 	var count = Object.keys(data.tasks).length ;

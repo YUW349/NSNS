@@ -11,6 +11,7 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var home = require('./routes/home');
 var input = require('./routes/input');
+var deleting = require('./routes/deleting');
 
 // Example route
 // var user = require('./routes/user');
@@ -45,6 +46,12 @@ app.get('/home', home.login);
 //app.get('/home',home.view);
 app.get('/input',home.addNewTask);
 app.get('/input',input.addNewTask);
+
+
+app.get('/tasks/:id', deleting.removetask);
+app.get('/editasks/:id', home.taskInfo);
+app.get('/home/eidited',home.edited);
+
 // Example route
 // app.get('/users', user.list);
 

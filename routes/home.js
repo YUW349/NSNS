@@ -58,10 +58,13 @@ exports.addNewTask = function(req,res){
     
     
   var newTask = { 
-              "taskname" : "Task Name: " + taskname,
-        "time" : time+time2+time3,
+              "taskname" : taskname,
+               "time1" : time,
+              "time2" : time2,
+              "time3" : time3,
+        "time" : time +time2+time3,
         "countdown" : countdown,
-        "location" : "Location: Price Center " ,
+        "location" : " Price Center " ,
         "id" : count,
         "onsetTime" : distance,
         "soundAlt" : false
@@ -82,6 +85,25 @@ exports.addNewTask = function(req,res){
     res.render('home',data);
 };
 
+
+
+
+exports.taskInfo = function(req, res) { 
+  var taskID = req.params.id;
+ console.log(taskID);
+    var editasks = data.tasks[taskID]; // of by one, our first project has index 0
+  
+    res.json(editasks);
+// data.tasks[taskID].taskname = "lalal";
+ console.log(data.tasks[taskID].taskname);
+}
+
+
+exports.edited = function (req,res){
+
+ res.render('home',data);
+
+}
 
 
 /*exports.removeTask = function(req,res){

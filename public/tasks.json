@@ -1,10 +1,10 @@
 {
 	"tasks" : [
 		{
-		"taskname" : "Task Name: Buy CHEM Book  " ,
+		"taskname" : "Buy CHEM Book  " ,
               "time" : "12:30:30" ,
               "countdown" : "TIME UP" ,
-              "location" : "Location: Price Center ",
+              "location" : "Price Center ",
               "id" : 0,
               "onsetTime":500,
               "soundAlt" : true
@@ -12,16 +12,16 @@
 
           },
           {
-		"taskname" : "Task Name: Get canopy from storage " ,
+		"taskname" : "Get canopy from storage " ,
               "time" : "12:31:30" ,
               "countdown" : "TIME UP" ,
-              "location" : "Location: Price Center ",
+              "location" : "Price Center ",
               "id" : 1,
               "onsetTime":20000,
                "soundAlt" : true
 	},
 	         {
-		"taskname" : "Task Name: Get quote from Imprints  " ,
+		"taskname" : "Get quote from Imprints  " ,
               "time" : "12:32:30" ,
               "countdown" : "TIME UP" ,
               "location" : "location not set ",
