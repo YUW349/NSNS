@@ -31,14 +31,14 @@ function editingTask(e){
 	// Prevent following the link
 	e.preventDefault();
 	var taskID = $(this).closest('.tasklist').attr('id');
-	//console.log("User clicked on task " +  taskID);
-	//$.get("/tasks/" + taskID, callback);
-	//console.log("task" + taskID);
+	console.log(" this is edit: User clicked on task " +  taskID);
+	$.get("/tasks/" + taskID, callback);
+	console.log(" this is edit: task" + taskID);
 }
 
 function callback(result){
 console.log(result);
-var taskHTML = '<form id="editingForm" role = "form" method="get" action="/edited">' + '<br>' +
+var taskHTML = '<form id="editingForm" role = "form" method="get" action="/home">' + '<br>' +
                '<div class ="taskname">' +
                '<label for="taskname">' + '<h4>' + "Task Name" + '</h4>'+ '</label>' + 
                '<input type="text" id="taskname" value="' +result.taskname+ ' " name="taskname" required">' +
@@ -112,9 +112,9 @@ var taskHTML = '<form id="editingForm" role = "form" method="get" action="/edite
              '</div>' + '<br>' +
 
             
+              '<input type="submit" id="submitB" class="btn btn-default" value="delete">'+
 
-
-             '<input type="submit" id="submitB" class="btn btn-default" value="cancel">'+
+             '<input type="submit" id="submitB" class="btn btn-default" value="save">'+
              '<br>'
 
                '</form>'

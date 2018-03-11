@@ -95,7 +95,7 @@ exports.taskInfo = function(req, res) { 
   
     res.json(editasks);
 // data.tasks[taskID].taskname = "lalal";
- console.log(data.tasks[taskID].taskname);
+ console.log("this is edited: " + data.tasks[taskID].taskname);
 }
 
 
