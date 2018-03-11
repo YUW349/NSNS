@@ -10,7 +10,7 @@ var data = JSON.parse(this.responseText);
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$('.deletingTask').click(remove);
+	//$('.deletingTask').click(remove);
  
     $('.editingTask').click(editingTask);
     $('#addTaskk').click(showAdd);

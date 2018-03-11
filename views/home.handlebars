@@ -22,7 +22,7 @@
 	<body background="/background2.png" link="white">
 
 
-		{{#if viewAlt}}
+		
 
 			<h1>
 			
@@ -168,74 +168,16 @@
 			<br>
 			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
 		</div>
+       
+       <a href="#" class="editingTask"> edit </a>
 
-
-     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
-        <!-- <a href="#" class="editingTask"> edit </a> -->
+    
+        <!--  <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a> -->
 
 </li>
 </ul>
 
 {{/each}}
-
-{{else}}
-
-<body background="/background2.png" link="white">
-	
-		<h1>
-			
-			<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
-			<a href="/input.html" class="addButton"><input id="addButton" type="submit" value="ADD NEW"></input></a>
-			<br>
-			Upcoming Tasks
-			</h1>
-			<p>{{welcome}}</p>
-			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
-
-		<nav>
-			
-		</nav> 
-		<div class = "intro">
-			<p>{{welcome}}</p>
-			<p>To add a new task, click on the + button.</p>
-
-		</div>
-
-		{{#each tasks}} 
-
-
-
-<ul class="tasks">
-	<li class ="tasklist" id= "{{id}}">
-
-	<p>Task Name: {{taskname}}</p>
-    <p>{{time}}</p > 
-    <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
-    <p>Location: {{location}}</p>
-    {{#if soundAlt}}
-<audio id="audioBar" controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
-		<source src="/pricecenter.m4a" type="audio/mpeg">
-		Your browser does not support the audio element.
-		</audio>
-		{{else}}
-		<audio controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
-		<source src="/time.m4a" type="audio/mpeg">
-		Your browser does not support the audio element.
-		</audio>
-		{{/if}}
-
-     
-
-
-     <!--<a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>-->
-     <!-- <a href="#" class="editingTask"> edit </a> -->
-<a href="#" class="editingTask"> edit </a>
-   <!--  <a href="/input.html" class="notification2"> <img src = "/image/Edit.jpg" width="21" height="21"></a> -->
-</li>
-</ul>
-{{/each}}
-{{/if}}
-
 
 
 
