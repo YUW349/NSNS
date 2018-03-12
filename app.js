@@ -40,12 +40,12 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 //app.get('/viewAlt',home.viewAlt);
-app.get('/home/viewAlt', index.viewHomeAlt);
+//app.get('/home/viewAlt', index.viewHomeAlt);
 app.get('/home', index.viewHome);
 app.get('/home', home.login); 
 //app.get('/home',home.view);
 app.get('/input',home.addNewTask);
-app.get('/input',input.addNewTask);
+//app.get('/input',input.addNewTask);
 
 
 app.get('/tasks/:id', deleting.removetask);
