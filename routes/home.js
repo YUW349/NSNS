@@ -91,9 +91,9 @@ exports.addNewTask = function(req,res){
 exports.taskInfo = function(req, res) { 
   var taskID = req.params.id;
  console.log(taskID);
-    var editasks = data.tasks[taskID]; // of by one, our first project has index 0
+    var tasks = data.tasks[taskID]; // of by one, our first project has index 0
   
-    res.json(editasks);
+    res.json(tasks);
 // data.tasks[taskID].taskname = "lalal";
  console.log("this is edited: " + data.tasks[taskID].taskname);
 }
@@ -101,7 +101,7 @@ exports.taskInfo = function(req, res) { 
 
 exports.edited = function (req,res){
 
- res.render('home',data);
+ res.render('home');
 
 }
 

@@ -49,9 +49,8 @@ app.get('/input',input.addNewTask);
 
 
 app.get('/tasks/:id', deleting.removetask);
-app.get('/editasks/:id', home.taskInfo);
-
-app.get('/home/',home.edited);
+app.get('/tasks/:id', home.taskInfo);
+//app.get('/home/',home.edited);
 
 // Example route
 // app.get('/users', user.list);

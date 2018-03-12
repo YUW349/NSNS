@@ -10,7 +10,7 @@ var data = JSON.parse(this.responseText);
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	//$('.deletingTask').click(remove);
+	$('.deletingTask').click(remove);
  
     $('.editingTask').click(editingTask);
     $('#addTaskk').click(showAdd);
@@ -111,10 +111,10 @@ var taskHTML = '<form id="editingForm" role = "form" method="get" action="/home"
                ' <input type="checkbox" id="S1" name="date" value="6">' + '<h5>' + 'Sat' + '</h5>' +
              '</div>' + '<br>' +
 
-            
-              '<input type="submit" id="submitB" class="btn btn-default" value="delete">'+
+              '<input type="submit" id="submitB" class="deletingTask" value="delete">'+
+              '<input type="submit" id="submitB" value="save">'
 
-             '<input type="submit" id="submitB" class="btn btn-default" value="save">'+
+          
              '<br>'
 
                '</form>'
@@ -138,8 +138,8 @@ function remove(e){
 
 	}
 
-function callback2(result){
-  var targetList = "#" + result.id;	
+function callback2(result2){
+  var targetList = "#" + result2.id;	
   console.log(targetList);
     alert("1. Task deleted!\n2. Please logout or add a new task to rerender the page after you deleted the task to avoid the error.\n3. Sorry for you cannot cancel the delete. we don't know how to code it!");
    $(targetList).remove();
