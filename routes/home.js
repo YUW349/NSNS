@@ -17,7 +17,7 @@ exports.login = function(req,res){
    } 
 
    data2.accountInfo.push(newAccountInfo);
-   console.log(newAccountInfo);
+   //console.log(newAccountInfo);
 
   res.render('home',{
 
@@ -29,13 +29,17 @@ exports.login = function(req,res){
 
 exports.addNewTask = function(req,res){
   var taskname = req.query.taskname;
+  var date1 = req.query.date1;
+  var date2 = req.query.date2;
+  var date3 = req.query.date3;
   var time = req.query.time;
   var time2 = req.query.time2;
   var time3 = req.query.time3;
   var location = req.query.location;
   var count = Object.keys(data.tasks).length ;
+  console.log(date1 + date2+ date3);
 
-  var countDownDate = new Date("Mar 9, 2018 " + time + time2 + time3).getTime()+28800000;
+  var countDownDate = new Date(date1 + date2 + date3 + time + time2 + time3).getTime()+28800000;
     var now = new Date().getTime();
     var distance = countDownDate - now;
     console.log(distance);
@@ -59,10 +63,13 @@ exports.addNewTask = function(req,res){
     
   var newTask = { 
               "taskname" : taskname,
+              "date1" : date1,
+              "date2" : date2,
+              "date3" : date3,
                "time1" : time,
               "time2" : time2,
               "time3" : time3,
-        "time" : time +time2+time3,
+        "time" : date1 + date2 + date3 + time +time2+time3,
         "countdown" : countdown,
         "location" : " Price Center " ,
         "id" : count,
@@ -78,7 +85,7 @@ exports.addNewTask = function(req,res){
   } */
 
     
-  //console.log(newTask);
+  console.log(newTask);
     data.tasks.push(newTask);
     //console.log(data);
 
