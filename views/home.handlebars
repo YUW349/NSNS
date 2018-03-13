@@ -33,6 +33,15 @@
 			</h1>
 			<p>{{welcome}}</p>
 			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
+
+			<div class="switch switch-blue">
+    			<input type="radio" class="switch-input" name="view2" value="week2" id="week2" checked>
+    			<label for="week2" class="switch-label switch-label-off">List</label>
+    			<input type="radio" class="switch-input" name="view2" value="month2" id="month2">
+    			<label for="month2" class="switch-label switch-label-on">Map</label>
+    			<span class="switch-selection"></span>
+  			</div>
+
 		
 		<form id="addNewTaskForm" role = "form" method="get" action="/input">
 
@@ -179,7 +188,11 @@
 
 {{/each}}
 
-
+<script>
+    document.getElementById('month2').addEventListener("change", function(){
+        if (this.checked) window.location.href = '/mapView.html';
+    });
+</script>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
