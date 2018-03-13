@@ -4,13 +4,16 @@ var data = require('../public/tasks.json');
 
 exports.addNewTask = function(req,res){
 	var taskname = req.query.taskname;
+	var date1 = req.query.date1;
+	var date2 = req.query.date2;
+	var date3 = req.query.date3;
 	var time = req.query.time;
 	var time2 = req.query.time2;
 	var time3 = req.query.time3;
 	var location = req.query.location;
 	var count = Object.keys(data.tasks).length ;
 
-	var countDownDate = new Date("Mar 9, 2018 " + time + time2 + time3).getTime()+28800000;
+	var countDownDate = new Date(date1 + date2 + date3 + time + time2 + time3).getTime()+28800000;
 		var now = new Date().getTime();
 		var distance = countDownDate - now;
 		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -33,10 +36,13 @@ exports.addNewTask = function(req,res){
 		
 	var newTask = { 
 	            "taskname" : taskname,
-	            "time1" : time,
-	            "time2" : time2,
-	            "time3" : time3,
-				"time" : time+time2+time3,
+              "date1" : date1,
+              "date2" : date2,
+              "date3" : date3,
+               "time1" : time,
+              "time2" : time2,
+              "time3" : time3,
+        "time" : date1 + date2 + date3 + time +time2+time3,
 				"countdown" : countdown,
 				"location" : "Price Center " ,
 				"id" : count,

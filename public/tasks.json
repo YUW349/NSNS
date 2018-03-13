@@ -2,7 +2,7 @@
 	"tasks" : [
 		{
 		"taskname" : "Buy CHEM Book  " ,
-              "time" : "12:30:30" ,
+              "time" : "May 16, 2018 12:30:30" ,
               "countdown" : "TIME UP" ,
               "location" : "Price Center ",
               "id" : 0,
@@ -13,7 +13,7 @@
           },
           {
 		"taskname" : "Get canopy from storage " ,
-              "time" : "12:31:30" ,
+              "time" : "May 16, 2018 12:31:30" ,
               "countdown" : "TIME UP" ,
               "location" : "Price Center ",
               "id" : 1,
@@ -22,7 +22,7 @@
 	},
 	         {
 		"taskname" : "Get quote from Imprints  " ,
-              "time" : "12:32:30" ,
+              "time" : "May 16, 2018 12:32:30" ,
               "countdown" : "TIME UP" ,
               "location" : "location not set ",
               "id" : 2,
