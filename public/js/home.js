@@ -32,21 +32,25 @@ function editingTask(e){
 	e.preventDefault();
 	var taskID = $(this).closest('.tasklist').attr('id');
 	console.log(" this is edit: User clicked on task " +  taskID);
-	$.get("/tasks/" + taskID, callback);
+	
 	console.log(" this is edit: task" + taskID);
+
+	if (confirm("Do you want to delete the task?")) {
+   
+    $.get("/tasks/" + taskID, callback);}
 }
 
 function callback(result){
 console.log(result);
 var taskHTML = '<form id="editingForm" role = "form" method="get" action="/home">' + '<br>' +
                '<div class ="taskname">' +
-               '<label for="taskname">' + '<h4>' + "delete " + result.taskname+ '</h4>'+ '</label>' + 
+               '<label for="taskname">' + '<h4>' + "You have deleted " + result.taskname+ '</h4>'+ '</label>' + 
                //'<input type="text" id="taskname" value="' +result.taskname+ ' " name="taskname" required">' +
                '</div>' + '<br>'+
 
              
 
-              '<input type="submit" id="submitB" class="deletingTask" value="delete">'+
+              '<input type="submit" id="submitB" class="deletingTask" value="OK">'+
               
 
           
