@@ -13,6 +13,7 @@
 
 
 		<title>Landing Page</title>
+
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<link href="/css/style.css" rel="stylesheet">
 	</head>
@@ -31,8 +32,8 @@
 			<br>
 			Upcoming Tasks
 			</h1>
-			<p>{{welcome}}</p>
-			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
+			
+			<p>Welcome, WeLoveMadhuri! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
 
 			<div class="switch switch-blue">
     			<input type="button" class="switch-input" name="view2" value="week2" id="week2" checked>
@@ -156,8 +157,14 @@
 		<br>
 		<div class="location">
 			<label for="location"><h4>Location</h4></label><br>
-			<input type="text2" id="location" value = "Price Center" name="location" disabled>
-			<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a>
+			<select id="location" name="location">
+					<option value="Price Center">Price Center</option>
+					<option value="Geisel Library">Geisel Library</option>
+					<option value="Book Store">Book Store</option>
+					<option value="SSC">SSC</option>
+			</select>
+		
+			<!--<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a> -->
 		</div>
 		<br>
 

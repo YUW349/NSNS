@@ -6,6 +6,12 @@ var data = require('../public/tasks.json');
 var data2 = require('../accountInfo.json');
 
 
+exports.viewHome = function(req,res){
+    //data["viewAlt"] = false;
+  res.render('home',data);
+  console.log(data.tasks);
+}
+
 exports.login = function(req,res){
    var userName = req.query.userName;
    var passWord = req.query.password;
@@ -17,17 +23,19 @@ exports.login = function(req,res){
    } 
 
    data2.accountInfo.push(newAccountInfo);
-   //console.log(newAccountInfo);
+   var welcome = "welcome," + userName +"!";
+   console.log(userName);
 
   res.render('home',{
 
-    "welcome" : "welcome to the reminder " + userName +"!"
+    "userName" : userName
   });
 }
 
 
 
 exports.addNewTask = function(req,res){
+  var userName = req.params.userName;
   var taskname = req.query.taskname;
   var date1 = req.query.date1;
   var date2 = req.query.date2;
@@ -71,7 +79,7 @@ exports.addNewTask = function(req,res){
               "time3" : time3,
         "time" : date1 + date2 + date3 + time +time2+time3,
         "countdown" : countdown,
-        "location" : " Price Center " ,
+        "location" : location ,
         "id" : count,
         "onsetTime" : distance,
         "soundAlt" : false
@@ -85,7 +93,7 @@ exports.addNewTask = function(req,res){
   } */
 
     
-  console.log(newTask);
+  //console.log(newTask);
     data.tasks.push(newTask);
     //console.log(data);
 

@@ -21,7 +21,7 @@
   </head>
   <body background="background2.png" link="white">
     <h1>
-      <a href = "index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
+      <input id="backButton" class="btn btn-default" value="DONE" onclick="goBack()"></input>
       <br>
       Current Location
       </h1>
@@ -67,7 +67,11 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/home.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBELtzTR-4_Hn8OkzWuLtaBGNaqVFzoQlc&callback=initMap">
     </script>

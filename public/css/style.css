@@ -336,6 +336,9 @@ input[type="checkbox"],  {
 	font-size:16px;
 }
 
+#location {
+	width: 90%;
+}
 
 
 /*toggle button*/
