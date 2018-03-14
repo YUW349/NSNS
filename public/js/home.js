@@ -87,8 +87,9 @@ function callback2(result2){
 
 
 function goBack(){
-	
 				window.history.back();
+				console.log("check");
+
 			}
 
 

@@ -46,12 +46,9 @@ app.get('/home', home.login);
 //app.get('/home',home.view);
 app.get('/input',home.addNewTask);
 //app.get('/input',input.addNewTask);
-
-
 app.get('/tasks/:id', deleting.removetask);
 app.get('/tasks/:id', home.taskInfo);
 //app.get('/home/',home.edited);
-
 // Example route
 // app.get('/users', user.list);
 

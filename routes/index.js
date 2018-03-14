@@ -5,7 +5,7 @@ exports.view = function(req,res){
 }
 
 exports.viewHome = function(req,res){
-    data["viewAlt"] = false;
+    //data["viewAlt"] = false;
 	res.render('home',data);
 	console.log(data.tasks);
 }

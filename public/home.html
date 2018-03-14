@@ -1,27 +1,201 @@
 <!doctype html>
 <html>
 	<head>
+	
+	<style>
+    * {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      color: rgba(255, 255, 255, 0.5);
+    }
+	</style>
+
+
+
+
 		<title>Landing Page</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
 	</head>
 	
-	<body>
-		<div class="header">
-			<h1><a href = "/index.html"><img id="logout" src = "/image/logout.jpg" width="29" height="29"  ></a>
-				<a href = "/faq.html"> How to? </a>
-				<a href="/input.html" class="addButton">
-					<img src = "/image/add.jpg" width="20" height="20">
-				</a>
+
+	
+	<body background="/background2.png" link="white">
+
+
+		
+
+			<h1>
+			
+			<a href = "/index.html"><input id="backButton" value="LOG OUT" onclick="goBack()"></input></a>
+			<a id="addTaskk" class="addButton" href ="#"> ADD NEW </a>
+			<br>
+			Upcoming Tasks
 			</h1>
+			<p>{{welcome}}</p>
+			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
+
+			<div class="switch switch-blue">
+    			<input type="radio" class="switch-input" name="view2" value="week2" id="week2" checked>
+    			<label for="week2" class="switch-label switch-label-off">List</label>
+    			<input type="radio" class="switch-input" name="view2" value="month2" id="month2">
+    			<label for="month2" class="switch-label switch-label-on">Map</label>
+    			<span class="switch-selection"></span>
+  			</div>
+
+		
+		<form id="addNewTaskForm" role = "form" method="get" action="/input">
+
+		<div class = "intro">
+		<h3>ADDING TASK</h3>
+		<div class ="taskname">
+			<label for="taskname"><h4>Task Name</h4></label><br>
+			<input type="text" id="taskname" 
+			placeholder="Buy a book..." name="taskname" required>
+		</div>
+		<br>
+		<div class="time">
+			<label for="time"><h4>Time (Hour:Minute:Second)</h4></label><br>
+			<select id="date1" name="date1">
+            <option value="Jan ">Jan</option>
+  			<option value="Feb ">Feb</option>
+			<option value="Mar ">Mar</option>
+			<option value="Apr ">Apr</option>
+			<option value="May ">May</option>
+			<option value="Jun ">Jun</option>
+			<option value="Jul ">Jul</option>
+			<option value="Aug ">Aug</option>
+			<option value="Sep ">Sep</option>
+			<option value="Oct ">Oct</option>
+			<option value="Nov ">Nov</option>
+			<option value="Dec ">Dec</option>
+			</select>
+			<select id="date2" name="date2">
+            <option value="1, ">1</option>
+  			<option value="2, ">2</option>
+			<option value="3, ">3</option>
+			<option value="4, ">4</option>
+			<option value="5, ">5</option>
+			<option value="6, ">6</option>
+			<option value="7, ">7</option>
+			<option value="8, ">8</option>
+			<option value="9, ">9</option>
+			<option value="10, ">10</option>
+			<option value="11, ">11</option>
+			<option value="12, ">12</option>
+			<option value="13, ">13</option>
+  			<option value="14, ">14</option>
+			<option value="15, ">15</option>
+			<option value="16, ">16</option>
+			<option value="17, ">17</option>
+			<option value="18, ">18</option>
+			<option value="19, ">19</option>
+			<option value="20, ">20</option>
+			<option value="21, ">21</option>
+			<option value="22, ">22</option>
+			<option value="23, ">23</option>
+			<option value="24, ">24</option>
+			<option value="25, ">25</option>
+			<option value="26, ">26</option>
+			<option value="27, ">27</option>
+			<option value="28, ">28</option>
+			<option value="29, ">29</option>
+			<option value="30, ">30</option>
+			<option value="31, ">31</option>		
+			</select>
+			<select id="date3" name="date3">
+  			<option value="2018 ">2018</option>
+			<option value="2019 ">2019</option>
+			<option value="2020 ">2020</option>
+		    </select>
+			<select id="time" name="time">
+            <option value="00:">AM 12</option>
+  			<option value="01:">AM 01</option>
+			<option value="02:">AM 02</option>
+			<option value="03:">AM 03</option>
+			<option value="04:">AM 04</option>
+			<option value="05:">AM 05</option>
+			<option value="06:">AM 06</option>
+			<option value="07:">AM 07</option>
+			<option value="08:">AM 08</option>
+			<option value="09:">AM 09</option>
+			<option value="10:">AM 10</option>
+			<option value="11:">AM 11</option>
+			<option value="12:">PM 12</option>
+			<option value="13:">PM 01</option>
+			<option value="14:">PM 02</option>
+			<option value="15:">PM 03</option>
+			<option value="16:">PM 04</option>
+			<option value="17:">PM 05</option>
+			<option value="18:">PM 06</option>
+			<option value="19:">PM 07</option>
+			<option value="20:">PM 08</option>
+			<option value="21:">PM 09</option>
+			<option value="22:">PM 10</option>
+			<option value="23:">PM 11</option>
+			</select>
+			:
+			<select id="time2" name="time2">
+			<option value="00:">00</option>
+			<option value="05:">05</option>
+			<option value="10:">10</option>	
+			<option value="15:">15</option>
+			<option value="20:">20</option>	
+			<option value="25:">25</option>
+			<option value="30:">30</option>	
+			<option value="35:">35</option>
+			<option value="40:">40</option>	
+			<option value="45:">45</option>
+			<option value="50:">50</option>
+			<option value="55:">55</option>
+			</select>
+			:
+			<select id="time3" name="time3">
+  			<option value="00">00</option>
+			<option value="30">30</option>
+		    </select>
+		</div>
+		<br>
+		<div class="location">
+			<label for="location"><h4>Location</h4></label><br>
+			<input type="text2" id="location" value = "Price Center" name="location" disabled>
+			<a href="/testmap.html"><img id="locationPic" src = "/image/location.jpg" width="25" height="30"> </a>
+		</div>
+		<br>
+
+		<div class="repeat">
+			<label for="repetition"><h4>Repeat</h4></label><br>
+
+		
+    <input type="checkbox" id="S1" name="date" value="7"><h5>Sun</h5>
+  
+    <input type="checkbox" id="M" name="date" value="1"><h5>Mon</h5>
+  
+    <input type="checkbox" id="T" name="date" value="2"><h5>Tue</h5>
+  
+    <input type="checkbox" id="W" name="date" value="3"><h5>Wed</h5>
+    <br>
+  
+    <input type="checkbox" id="T" name="date" value="4"><h5>Thu</h5>
+  
+    <input type="checkbox" id="F" name="date" value="7"><h5>Fri</h5>
+  
+    <input type="checkbox" id="S" name="date" value="7"><h5>Sat</h5>
+  	</div>
+  	<br>
+		<div class="notification2">
+			<label for="notification2"><h4>Notification</h4></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h5>Phone current setting</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h5>Headphones and Vibration</h5>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h5>Vibration only</h5>
 		</div>
 
-		<nav>
-			
-		</nav> 
-		<div class = "intro">
-			<p>welcome to the reminder</p>
-			<p>To add a new task, click on the + button.</p>
+		<input id="cancel" class="btn btn-default" value="CANCEL" onclick=cancelTask()>
+
+		<input type="submit" id="submitB" class="btn btn-default" value="SAVE">
+		<br>
+	</form>
 
 		</div>
 
@@ -33,7 +207,16 @@
     <p>Price Center</p>
     <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 500)">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
-     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+     	<div class="notification2">
+			<label for="notification2"><h6>Notification</h6></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h6>Phone current setting</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h6>Headphones and vibration</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
+		</div>
+       
+       <a href="#" class="editingTask"> delete </a>
 </li>
 
 	<li class ="tasklist" id= "{{id}}">
@@ -43,7 +226,17 @@
     <p>Price Center</p>
     <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)">
 		<source src="/time.m4a" type="audio/mpeg">
-     <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+   
+     	<div class="notification2">
+			<label for="notification2"><h6>Notification</h6></label><br>
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h6>Phone current setting</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h6>Headphones and vibration</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
+		</div>
+       
+       <a href="#" class="editingTask"> delete </a>
 </li>
 
 <li class ="tasklist" id= "{{id}}">
@@ -54,15 +247,44 @@
     <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 4000)">
 		<source src="/time.m4a" type="audio/mpeg">
      <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a>
+     	<div class="notification2">
+	
+			<input type="radio" id="note" name="pushnote" value="Speaker"><h6>Phone current setting</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h6>Headphones and vibration</h6>
+			<br>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
+		</div>
+       
+       <a href="#" class="editingTask"> delete </a>
 </li>
 </ul>
 
-		
-
+<script>
+    document.getElementById('month2').addEventListener("change", function(){
+        if (this.checked) window.location.href = '/mapView.html';
+    });
+</script>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/home.js"></script>
+	
+
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

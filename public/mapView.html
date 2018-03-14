@@ -40,9 +40,12 @@
       </h1>
       <p>Welcome! For instructions, refer to <a href = "faq.html">FAQ</a>. </p>
 
+
+
+
         <div class="switch switch-blue">
-          <input type="radio" class="switch-input" name="view2" value="week2" id="week2">
-          <label for="week2" class="switch-label switch-label-off">List</label>
+          <input type="radio"  class="switch-input" name="view2" value="week2" id="week2" >
+          <a href = "#"><label for="week2" class="switch-label switch-label-off" onclick="goBack()" >List</label></a>
           <input type="radio" class="switch-input" name="view2" value="month2" id="month2" checked>
           <label for="month2" class="switch-label switch-label-on">Map</label>
           <span class="switch-selection"></span>
@@ -152,6 +155,8 @@
       
 
     </script>
+
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBELtzTR-4_Hn8OkzWuLtaBGNaqVFzoQlc&callback=initMap">
     </script>
