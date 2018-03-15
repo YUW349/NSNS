@@ -23,6 +23,8 @@ function changeUser(response) {
 $(".facebookLogin").hide();
 $(".username").hide();
 $(".password").hide();
+$("#privacypage").hide();
 $("#name").text(response.name);
+
 $("#logo").attr("src",response.picture.data.url);
 }
