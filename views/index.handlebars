@@ -14,7 +14,24 @@
 		</style>
 	</head>
 	<body background="/background.png" link="white">
-	
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      :'2037252603208547' ,
+					cookie     : true,
+					xfbml      : true,
+					version    : 'v2.12'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 			<br>
 			<br>
 			<br>
@@ -42,6 +59,6 @@
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-{{> facebook}}
+
 <script src="/js/facebook.js"></script>
 </html>
