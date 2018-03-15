@@ -83,25 +83,46 @@
         for (var city in citymap) {
           // Add the circle for this city to the map.
           var cityCircle = new google.maps.Circle({
-            strokeColor: '#FF0000',
+            strokeColor: '#ffa232',
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: '#FF0000',
+            fillColor: '#ffa232',
             fillOpacity: 0.35,
             map: map,
             center: citymap[city].center,
             radius: Math.sqrt(citymap[city].population) * 100
           });
 
+                    var cityCircle2 = new google.maps.Circle({
+            strokeColor: '#ffa232',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#ffa232',
+            fillOpacity: 0.35,
+            map: map,
+            center: {lat:32.8812, lng: -117.2374},
+            radius: Math.sqrt(citymap[city].population) * 100
+          });
+
+                              var cityCircle3 = new google.maps.Circle({
+            strokeColor: '#ffa232',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#ffa232',
+            fillOpacity: 0.35,
+            map: map,
+            center: {lat:32.8794, lng: -117.2369},
+            radius: Math.sqrt(citymap[city].population) * 100
+          });
 
           var contentString = 
-            '<h5>Final Presentation</h5>';
+            '<h5>COGS120 Final Presentation</h5>';
 
           var contentString1 = 
-            '<h5>group meeting</h5>';
+            '<h5>COGS120 Group Meeting</h5>';
 
            var contentString2 = 
-            '<h5>Buy Chem book</h5>';
+            '<h5>Buy CHEM book</h5>';
 
             var infowindow = new google.maps.InfoWindow({
           content: contentString,

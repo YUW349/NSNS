@@ -138,10 +138,10 @@ var x = setInterval(function() {
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 		if(distance<0){
-			var countdown = "TIME UP";
+			var countdown = "PAST DUE";
 			$(".countdown").css({'color' : 'red'});
 			}else{
-			var countdown = "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			var countdown = "DUE IN: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 			}
 		var main = document.getElementById(tasks[i].getAttribute('id'));
 		main.getElementsByTagName('div')[0].innerHTML = countdown;

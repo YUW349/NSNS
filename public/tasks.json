@@ -1,31 +1,39 @@
 {
 	"tasks" : [
-		{
-		"taskname" : "Buy CHEM Book  " ,
-              "time" : "May 16, 2018 12:30:30" ,
-              "countdown" : "TIME UP" ,
-              "location" : "Price Center ",
+          {
+		"taskname" : "COGS120 Final Presentation " ,
+              "time" : "Mar 16, 2018 17:30:00" ,
+              "countdown" : "PAST DUE" ,
+              "location" : "Student Services Center ",
               "id" : 0,
+              "onsetTime":20000,
+               "soundAlt" : true
+	},
+     { "taskname" : "COGS120 Group Meeting " ,
+              "time" : "Mar 16, 2018 09:00:00" ,
+              "countdown" : "PAST DUE" ,
+              "location" : "Geisel Library ",
+              "id" : 1,
+              "onsetTime":1000000,
+               "soundAlt" : true
+  },
+      {
+    "taskname" : "Buy CHEM Book  " ,
+              "time" : "Mar 16, 2018 12:30:30" ,
+              "countdown" : "PAST DUE" ,
+              "location" : "PC Bookstore ",
+              "id" : 2,
               "onsetTime":500,
               "soundAlt" : true
 
 
           },
-          {
-		"taskname" : "Get canopy from storage " ,
-              "time" : "May 16, 2018 12:31:30" ,
-              "countdown" : "TIME UP" ,
-              "location" : "Price Center ",
-              "id" : 1,
-              "onsetTime":20000,
-               "soundAlt" : true
-	},
 	         {
-		"taskname" : "Get quote from Imprints  " ,
-              "time" : "May 16, 2018 12:32:30" ,
-              "countdown" : "TIME UP" ,
-              "location" : "location not set ",
-              "id" : 2,
+		"taskname" : "Complete Intern App  " ,
+              "time" : "Mar 16, 2018 12:32:30" ,
+              "countdown" : "PAST DUE" ,
+              "location" : "Location not set ",
+              "id" : 3,
               "onsetTime":30000,
               "soundAlt" : false
 	}

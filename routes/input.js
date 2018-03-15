@@ -22,10 +22,10 @@ exports.addNewTask = function(req,res){
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 	if(distance<=0){
-        		var countdown = "TIME UP";
+        		var countdown = "PAST DUE";
         		
 				}else{
-				var countdown = "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+				var countdown = "DUE IN: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 				}
 
 

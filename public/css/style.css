@@ -53,6 +53,17 @@ h4 {
 	font-size: 18px;
 }
 
+#repeat{
+		color: white;
+	margin-top: 30px;
+    margin-bottom: -25px;
+	padding-left: 5px;
+	padding-right: 20px;
+	line-height:20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+}
+
 h5 {
 	color: white;
 	margin-top: -10px;
@@ -72,6 +83,11 @@ h6{
 	display:inline;
 }
 
+#icon{
+	float:left;
+	margin-right: 5px
+}
+
 .header{
 	opacity: 0.86;
 	background-color: #7BABEE;
@@ -87,7 +103,7 @@ h6{
   clear: both;
 }
 
-input[type="password"], input[type="text"] {
+input[type="password"] {
   border: 3px solid #ffffff;
   border-radius: 10px;
   background-color:rgba(0, 0, 0, 0.23);
@@ -97,6 +113,22 @@ input[type="password"], input[type="text"] {
   padding-left: 20px;
   transition: box-shadow 0.3s;
   width: 90%;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: white;
+  opacity: 0.7;
+}
+
+input[type="text"] {
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  background-color:rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  height: 45px;
+  padding-left: 20px;
+  transition: box-shadow 0.3s;
+  width: 93%;
   font-size: 20px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: white;
@@ -173,13 +205,72 @@ input[type="text3"] {
   background-color: #ffa232;
 }
 
+#delete{
+	margin-top: -5px;
+	float: right;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#taskname{
+	font-size: 20px;
+	text-align: left;
+	margin-top: 0px;
+	padding-left: 0px;
+	line-height: 25px;
+}
+
 /*task page*/
 #detail {
-	font-size: 0.8em;
-	position:relative;
-	bottom:32px;
-	margin-bottom: 0px;
+	text-align: left;
+	margin-top: -15px;
+	padding-left: 0px;
+	line-height: 25px;
 }
+
+#location {
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	line-height: 25px;
+}
+
+.countdown{
+	color: white;
+	opacity: 0.7;
+	padding-left: 0px;
+	padding-right: 40px;
+	font-size: 15px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: left;
+	margin-top: -15px;
+	line-height: 30px;
+}
+
+.notification2{
+	color: white;
+	opacity: 0.7;
+	padding-left: 0px;
+	padding-right: 40px;
+	font-size: 15px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: left;
+	margin-top: 0px;
+	line-height: 30px;
+}
+
+#notifselect"{
+	color: white;
+	padding-left: 0px;
+	padding-right: 40px;
+	font-size: 15px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: left;
+	margin-top: 0px;
+	line-height: 30px;
+}
+
 
 
 #logout{
@@ -273,7 +364,7 @@ text-align: center;
 	text-align: center;
 	background-color: #ffa232;
 	border-radius: 10px;
-	width:68%;
+	width:80%;
 	margin: auto;
 	padding: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -281,19 +372,20 @@ text-align: center;
 	display: none;
 }
 
-audio { width: 250px;  }
+audio {  width: 250px;  }
 
 ul.tasks {
-	margin-right: 38px;
+	margin-right: 0px;
+	margin-left: -40px;
+	margin-bottom: -16px;
 }
 
 ul.tasks li, #iw-container{
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.25);
 	padding: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 40px 20px 0 rgba(0, 0, 0, 0.19);
 	list-style: none;
-	margin-bottom: 50px;
 }
 
 
@@ -319,12 +411,30 @@ select {
 	width:28%;
 	font-size: 20px;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: center;
+	text-align-last: center;
 	color: white;
 	opacity: 0.7;
 }
 
+select::-ms-expand {
+    display: none;
+}
+
 #time, #time2, #time3 {
-	font-size:16px;
+	font-size:18px;
+}
+
+#date1, #date2 {
+	font-size:18px;
+	margin-right: 9px;
+	margin-bottom: 8px;
+	margin-top: -10px;
+}
+#date3{
+	font-size: 18px;
+	margin-bottom: 8px;
+	margin-top: -10px;
 }
 
 #locationPic {
@@ -337,7 +447,8 @@ input[type="checkbox"],  {
 }
 
 #location {
-	width: 90%;
+	margin-left: 8px;
+	width: 95%;
 }
 
 
@@ -361,12 +472,15 @@ input[type="checkbox"],  {
   font-size: 11px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
   cursor: pointer;
 }
 
 .switch-label:active {
   font-weight: bold;
+}
+
+#listt {
+	color: #2E3959;
 }
 
 .switch-label-off {

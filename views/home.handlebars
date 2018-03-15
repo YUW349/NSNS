@@ -33,11 +33,11 @@
 			Upcoming Tasks
 			</h1>
 			
-			<p>Welcome, WeLoveMadhuri! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
+			<p>Welcome! For instructions, refer to <a href = "/faq.html">FAQ</a>. </p>
 
 			<div class="switch switch-blue">
     			<input type="button" class="switch-input" name="view2" value="week2" id="week2" checked>
-    			<label for="week2" class="switch-label switch-label-off">List</label> 
+    			<label for="week2" id="listt" class="switch-label switch-label-off">List</label> 
     			<input type="button" class="switch-input" name="view2" value="month2" id="month2">
     			<label for="month2" class="switch-label switch-label-on" >Map</label> 
     			<span class="switch-selection"></span>
@@ -46,28 +46,27 @@
 		<form id="addNewTaskForm" role = "form" method="get" action="/input">
 
 		<div class = "intro">
-		<h3>ADDING TASK</h3>
+		<h3 id="adding">ADDING TASK</h3>
 		<div class ="taskname">
 			<label for="taskname"><h4>Task Name</h4></label><br>
-			<input type="text" id="taskname" 
-			placeholder="Buy a book..." name="taskname" required>
+			<input type="text" id="taskname" placeholder="Buy a book..." name="taskname" required>
 		</div>
 		<br>
 		<div class="time">
-			<label for="time"><h4>Time (Hour:Minute:Second)</h4></label><br>
+			<label for="time"><h4>Date &amp; Time</h4></label><br>
 			<select id="date1" name="date1">
-            <option value="Jan ">Jan</option>
-  			<option value="Feb ">Feb</option>
-			<option value="Mar ">Mar</option>
-			<option value="Apr ">Apr</option>
-			<option value="May ">May</option>
-			<option value="Jun ">Jun</option>
-			<option value="Jul ">Jul</option>
-			<option value="Aug ">Aug</option>
-			<option value="Sep ">Sep</option>
-			<option value="Oct ">Oct</option>
-			<option value="Nov ">Nov</option>
-			<option value="Dec ">Dec</option>
+            <option value="Jan ">JAN</option>
+  			<option value="Feb ">FEB</option>
+			<option value="Mar ">MAR</option>
+			<option value="Apr ">APR</option>
+			<option value="May ">MAY</option>
+			<option value="Jun ">JUN</option>
+			<option value="Jul ">JUL</option>
+			<option value="Aug ">AUG</option>
+			<option value="Sep ">SEP</option>
+			<option value="Oct ">OCT</option>
+			<option value="Nov ">NOV</option>
+			<option value="Dec ">DEC</option>
 			</select>
 			<select id="date2" name="date2">
             <option value="1, ">1</option>
@@ -156,7 +155,7 @@
 		</div>
 		<br>
 		<div class="location">
-			<label for="location"><h4>Location</h4></label><br>
+			<label for="location"><h4>Favorite Location List</h4></label><br>
 			<select id="location" name="location">
 					<option value="Price Center">Price Center</option>
 					<option value="Geisel Library">Geisel Library</option>
@@ -169,7 +168,7 @@
 		<br>
 
 		<div class="repeat">
-			<label for="repetition"><h4>Repeat</h4></label><br>
+			<label for="repetition"><h4 id="repeat">Repeat</h4></label><br>
 
 		
     <input type="checkbox" id="S1" name="date" value="7"><h5>Sun</h5>
@@ -189,12 +188,10 @@
   	</div>
   	<br>
 		<div class="notification2">
-			<label for="notification2"><h4>Notification</h4></label><br>
-			<input type="radio" id="note" name="pushnote" value="Speaker"><h5>Phone current setting</h5>
-			<br>
-			<input type="radio" id="note" name="pushnote" value="Headphones"><h5>Headphones and Vibration</h5>
-			<br>
-			<input type="radio" id="note" name="pushnote" value="Vibration"><h5>Vibration only</h5>
+			<label for="notification2"><h6>Notification:</h6></label>
+			<input type="radio" id="note" name="pushnote" value="Speaker" checked="checked"><h6><img src="/phone.png" height="20"></h6>
+			<input type="radio" id="note" name="pushnote" value="Headphones"><h6><img src="/music.png" height="20" width="20"></h6>
+			<input type="radio" id="note" name="pushnote" value="Vibration"><h6><img src="/vibrate.png" height="20" width="20"></h6>
 		</div>
 
 		<input id="cancel" class="btn btn-default" value="CANCEL" onclick=cancelTask()>
@@ -209,35 +206,25 @@
 
 <ul class="tasks">
 	<li class ="tasklist" id= "{{id}}">
-
-	<p>Task Name : {{taskname}}</p >
-    <p>{{time}}</p > 
+	<a href="#" class="editingTask" id="delete"> ✕ </a>
+	<p id="taskname">{{taskname}}</p >
+    <p id="detail">DUE ON: {{time}}</p > 
     <div class ="countdown" id= "countdown{{id}}">{{countdown}}</div> 
-    <p>Location: {{location}}</p >
+    <p id="location"><img src="/pin.png" height="15"> {{location}}</p >
     {{#if soundAlt}}
    <div class="audioBar">
-<audio  controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+<audio  controls style="display: none" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/pricecenter.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 </div>
 		{{else}}
-		<audio controls controlsList="nodownload" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
+		<audio controls style="display: none" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, {{onsetTime}})">
 		<source src="/time.m4a" type="audio/mpeg">
 		Your browser does not support the audio element.
 		</audio>
 		{{/if}}
-		<div class="notification2">
-			<label for="notification2"><h6>Notification</h6></label><br>
-			<input type="radio" id="note" name="pushnote" value="Speaker"><h6>Phone current setting</h6>
-			<br>
-			<input type="radio" id="note" name="pushnote" value="Headphones"><h6>Headphones and vibration</h6>
-			<br>
-			<input type="radio" id="note" name="pushnote" value="Vibration"><h6>Vibration only</h6>
-		</div>
-       
-       <a href="#" class="editingTask"> delete </a>
-
+		<br>
     
         <!--  <a href="#" class="deletingTask"> <img src = "/image/delete.jpg" width="21" height="21"></a> -->
 
