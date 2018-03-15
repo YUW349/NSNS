@@ -14,7 +14,7 @@
 		</style>
 	</head>
 	<body background="/background.png" link="white">
-
+	
 			<br>
 			<br>
 			<br>
@@ -32,7 +32,6 @@
     				<input type="password" id="userpassword" name="password" value = "12345678" disabled><br>
     			</div>
    				<input id="loginButton" type = "submit" value="Log In">
-   					<p class="facebookLogin">Please login through Facebook 
    				<div class="facebookLogin">
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="xlarge"></fb:login-button>
 				</div>
@@ -43,6 +42,6 @@
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	{{> facebook}}
+{{> facebook}}
 <script src="/js/facebook.js"></script>
 </html>
