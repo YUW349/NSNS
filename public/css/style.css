@@ -524,3 +524,9 @@ input[type="checkbox"],  {
 .switch-blue .switch-selection {
   background: #ffffff;
 }
+
+#name{
+text-align: center;
+font-size: 20px;
+font-color: black;
+}
