@@ -25,6 +25,6 @@ $(".username").hide();
 $(".password").hide();
 $("#privacypage").hide();
 $("#name").text(response.name);
-
 $("#logo").attr("src",response.picture.data.url);
+document.getElementById('loginButton').style.left="300px";
 }
