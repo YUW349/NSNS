@@ -139,7 +139,6 @@ var x = setInterval(function() {
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 		if(distance<0){
 			var countdown = "PAST DUE";
-			$(".countdown").css({'color' : 'red'});
 			}else{
 			var countdown = "DUE IN: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 			}

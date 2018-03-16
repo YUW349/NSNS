@@ -35,29 +35,33 @@
       <br>
       <br>
       <br>
-      <img src="/logo.png" alt="Logo" style="width:260px">
+      <img id="logo" src="/logo.png" alt="Logo" style="width:260px;">
+      
+      <p id = "name"> </p>
+        
         <form id="userLogin" role = "page" method="get" action="./home">
 
       <div class="Login">
         <br>
         <br>
         <div class ="username">
-            <input type="text" id="userLogin"  name="userName" value = "WeLoveMadhuri"><br>
+            <input type="username" id="userLogin"  name="userName" value = "WeLoveMadhuri" disabled><br>
           </div>
 
           <div class ="password">
-            <input type="password" id="userpassword" name="password" value = "12345678"><br>
+            <input type="password" id="userpassword" name="password" value = "12345678" disabled><br>
           </div>
           <input id="loginButton" type = "submit" value="Log In">
           <div class="facebookLogin">
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="xlarge"></fb:login-button>
         </div>
         <br>
-          <p align="center"><a href="/privacy.html">PRIVACY POLICY</a></p>
+          <p id = "privacypage" align="center"><a href="/privacy.html">PRIVACY POLICY</a></p>
       </div>  
         </form>
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/facebook.js"></script>
+
+<script src="/js/facebook.js"></script>
 </html>
